@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="color-scheme" content="light">
+<meta name="description" content="내 성격, 돈복, 매력, 연애는 어떻게 나올까? 생년월일만 넣으면 바로 결과가 나와요">
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="MZu's 도파민 사주">
+<meta property="og:title" content="MZu's 도파민 사주 ♥">
+<meta property="og:description" content="내 성격, 돈복, 매력, 연애는 어떻게 나올까? 생년월일만 넣으면 바로 결과가 나와요">
+<meta property="og:image" content="https://saju-site-ecru.vercel.app/og.png">
+<meta property="og:url" content="https://saju-site-ecru.vercel.app/">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin><link href="https://fonts.googleapis.com/css2?family=Gowun+Dodum&family=Jua&display=swap" rel="stylesheet">
+<title>MZu's 도파민 사주 ♥</title>
+<style>
+:root{--bg:#f4f1ff;--grad:linear-gradient(180deg,#dcecff 0%,#f6eefa 38%,#ffeaf2 62%,#e9e2fb 100%);--pg:linear-gradient(135deg,#ffdce9 0%,#e6dcfb 50%,#d2e8fd 100%);--card:#fffafcd9;--ink:#0f1424;--txt:#1b2236;--sub:#3f4863;--line:#e3dcf3;--acc:#6f8fe8;--on:#fff;--bar:linear-gradient(90deg,#ffb3cf,#cbb7f4,#9ccaf7);--track:#ece6f8;
+box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+:root{color-scheme:light}
+
+html{scroll-padding-top:env(safe-area-inset-top,0px)}
+*{box-sizing:border-box}
+body{margin:0;background:var(--bg);background-image:var(--grad);color:var(--ink);font-family:"Gowun Dodum","Apple SD Gothic Neo","Noto Sans KR","Malgun Gothic",sans-serif;line-height:1.7;-webkit-font-smoothing:antialiased;-webkit-text-stroke:.25px currentColor}
+main{max-width:560px;margin:0 auto;padding:40px 20px 64px}
+h1{font-family:"Jua","Gowun Dodum",sans-serif;font-size:34px;letter-spacing:-.02em;margin:0 0 8px;font-weight:400;color:var(--ink)}
+.lead{color:var(--sub);margin:0 0 28px;font-size:15px}.by{margin:0 0 10px;font-size:14px;color:var(--sub)}.by a{color:var(--acc);text-decoration:underline}
+.card{background:var(--card);border:1px solid var(--line);border-radius:22px;padding:22px;margin-bottom:14px;box-shadow:0 6px 20px rgba(160,140,230,.18)}
+label{display:block;font-size:13px;color:var(--sub);margin:14px 0 6px}
+label:first-child{margin-top:0}
+input[type=number]{-moz-appearance:textfield;width:100%;padding:12px;border:1px solid var(--line);border-radius:10px;background:var(--bg);color:var(--ink);font:inherit;font-size:16px}
+.row{display:flex;gap:8px}.row input{min-width:0;flex:1}.row .seg{margin:0}input::-webkit-outer-spin-button,input::-webkit-inner-spin-button{-webkit-appearance:none;margin:0}
+.seg{flex:1;position:relative}
+.seg input{position:absolute;opacity:0}
+.seg span{display:block;text-align:center;padding:11px;border:1px solid var(--line);border-radius:10px;font-size:15px;cursor:pointer}
+.seg input:checked+span{background:var(--pg);color:#2b2a4a;border-color:transparent}
+.chk{display:flex;align-items:center;gap:8px;font-size:14px;color:var(--sub);margin-top:10px}
+button{width:100%;margin-top:20px;padding:14px;border:0;border-radius:12px;background:var(--pg);color:#2b2a4a;font:inherit;font-size:17px;cursor:pointer}
+.err{color:#c0392b;font-size:14px;margin-top:10px;min-height:1em}
+#out{display:none}
+h2{font-family:"Jua","Gowun Dodum",sans-serif;font-size:25px;font-weight:400;color:var(--ink);letter-spacing:-.01em;margin:38px 0 12px}
+.pillars{display:grid;grid-template-columns:repeat(4,1fr);gap:8px}
+.p{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 6px 6px;text-align:center}
+.p small{display:block;color:var(--sub);font-size:13px;margin-bottom:6px}
+.bx{border-radius:12px;padding:10px 0 7px;margin-bottom:6px;border:1px solid rgba(0,0,0,.12)}.bx b{display:block;font-size:28px;font-weight:400;line-height:1.2;font-family:"Noto Serif KR","Apple Myungjo",serif}.bx.m{background:#8fd9a0;color:#10361a}.bx.f{background:#ff8f88;color:#5a1410}.bx.t{background:#ffe27a;color:#4d3b00}.bx.g{background:#fff;color:#2b2f3a}.bx.w{background:#2f3340;color:#fff}.bx.x{background:var(--track);color:var(--sub)}
+.bx i{display:block;font-style:normal;font-size:13px}.bx u{display:block;text-decoration:none;font-size:11px;opacity:.85}
+.p.me{border-color:var(--acc);box-shadow:0 0 0 2px var(--acc)}
+.hero{font-family:"Jua","Gowun Dodum",sans-serif;font-size:22px;font-weight:400;margin:0 0 6px}
+.hero+p,.card p{margin:0;font-size:16.5px;color:var(--txt)}
+.el{display:flex;align-items:center;gap:10px;font-size:14px;margin:8px 0}
+.el span:first-child{width:44px}
+.tr{height:6px;flex:1;background:var(--track);border-radius:3px;overflow:hidden}
+.tr div{height:100%;background:var(--bar);border-radius:3px}
+.el span:last-child{width:28px;text-align:right;color:var(--sub);font-variant-numeric:tabular-nums}
+.t{padding:16px 0;border-top:1px solid var(--line)}
+.t:first-child{border-top:0;padding-top:0}
+.t:last-child{padding-bottom:0}
+.th{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:6px}
+.th b{font-family:"Jua","Gowun Dodum",sans-serif;font-weight:400;font-size:20px}.th em{font-style:normal;font-size:24px;font-weight:700;color:var(--acc);font-variant-numeric:tabular-nums}
+.t p{margin-top:8px}
+.mbti{font-family:"Jua","Gowun Dodum",sans-serif;font-size:44px;font-weight:400;color:var(--acc);letter-spacing:.06em;margin:0 0 6px}
+.note{font-size:12px;color:var(--sub);text-align:center;margin-top:28px}
+.re{background:transparent;color:var(--ink);border:1px solid var(--line);margin-top:18px}
+.shr{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin-top:14px}.shr button{margin-top:0;font-size:15px;padding:14px 6px}.shr .kk{background:#fee500;color:#191600}.shr .sb{background:var(--pg);color:#2b2a4a}
+html{min-height:100%;background:#f4f1ff}
+body{min-height:100vh;min-height:100dvh;background-attachment:fixed;background-repeat:no-repeat;background-size:cover}
+h1,.by,.lead{text-align:center}
+.row input,.seg span{height:50px;padding:0 12px;display:block;line-height:48px;border-radius:12px}
+.seg span{padding:0;border:1px solid var(--line);background:var(--bg)}
+.row input{line-height:normal}
+.hint{font-size:12px;color:var(--sub);margin-top:6px}
+.row.off input{opacity:.4;pointer-events:none}.row.off+.hint{opacity:.5}
+.re{background:#fff;color:#2b2a4a;border:2px solid #8f7fd8;font-weight:700;-webkit-text-stroke:.4px currentColor;box-shadow:0 3px 10px rgba(143,127,216,.25)}
+.gs{background:var(--pg);margin-top:0;margin-bottom:6px}
+body{line-height:1.9;word-break:keep-all;overflow-wrap:break-word}
+.card p{margin:0 0 16px!important;line-height:1.9;font-size:16.5px}
+.card p:last-child{margin-bottom:0!important}
+.card p.hero{margin-bottom:12px!important;line-height:1.5}
+.t{padding:22px 0}.t:first-child{padding-top:0}.t:last-child{padding-bottom:0}
+.t .th{margin-bottom:10px}.tr{margin-bottom:14px}
+h2{margin:44px 0 14px;line-height:1.35}
+.card{padding:24px 22px}
+.shr+*{margin-top:0}
+.pane{display:none}.pane.on{display:block}
+.tabs{position:sticky;top:0;z-index:20;display:flex;gap:8px;overflow-x:auto;-webkit-overflow-scrolling:touch;scrollbar-width:none;margin:0 -20px 4px;padding:10px 20px;background:rgba(246,238,250,.92);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px)}
+.tabs::-webkit-scrollbar{display:none}
+.tb{flex:0 0 auto;width:auto;margin:0;padding:10px 18px;border-radius:999px;border:1.5px solid #cfc6ee;background:#fff;color:#2b2a4a;font-size:15px;font-weight:700;-webkit-text-stroke:.3px currentColor;white-space:nowrap}
+.tb.on{background:var(--pg);border-color:#8f7fd8;box-shadow:0 2px 8px rgba(143,127,216,.3)}
+.pane>h2:first-child{margin-top:20px}
+.nav{display:flex;gap:8px;margin:0 0 16px}
+.nb{flex:1;width:auto;margin:0;padding:12px 6px;font-size:15px;font-weight:700;border-radius:14px;background:#fff;color:#2b2a4a;border:1.5px solid #cfc6ee;-webkit-text-stroke:.3px currentColor}
+.nb.on{background:var(--pg);border-color:#8f7fd8;box-shadow:0 2px 8px rgba(143,127,216,.3)}
+#board{display:none}.vb #board{display:block}.vb #shared,.vb #f,.vb #out{display:none!important}
+.bnote{font-size:14px;color:var(--sub);margin:0 0 14px;line-height:1.8}
+.tin{width:100%;padding:12px;border:1px solid var(--line);border-radius:12px;background:var(--bg);color:var(--ink);font:inherit;font-size:16px;display:block}
+textarea.tin{resize:vertical;min-height:100px}
+.bp{border-top:1px solid var(--line);padding:16px 0}.bp:first-child{border-top:0;padding-top:0}
+.bh{display:flex;justify-content:space-between;gap:8px;font-size:13px;color:var(--sub);margin-bottom:6px}
+.bh b{color:var(--ink)}.tag{display:inline-block;padding:1px 8px;border-radius:99px;background:var(--pg);font-size:12px;color:#2b2a4a;margin-right:6px}
+.bx2{white-space:pre-wrap;word-break:break-word;margin:0 0 10px!important}
+.ans{background:#f3efff;border-radius:12px;padding:12px 14px;margin-top:8px}.ans small{display:block;color:var(--acc);font-weight:700;margin-bottom:4px}
+.bb{display:inline-block;width:auto;margin:6px 6px 0 0;padding:8px 14px;font-size:14px;border-radius:10px;background:#fff;color:#2b2a4a;border:1.5px solid #cfc6ee;font-weight:700}
+.bb.pr{background:var(--pg);border-color:#8f7fd8}
+#chat{display:none}.vc #chat{display:block}.vc #shared,.vc #f,.vc #out{display:none!important}
+.cl{max-height:52vh;overflow-y:auto;display:flex;flex-direction:column;gap:10px;padding:2px 2px 10px}
+.cm{background:#fff;border:1px solid var(--line);border-radius:14px;padding:9px 12px;max-width:92%;align-self:flex-start;word-break:break-word}
+.cm.mz{background:var(--pg);align-self:flex-end;border-color:#cfc6ee}
+.cm b{font-size:13px;color:var(--sub);display:block;margin-bottom:2px}.cm span{font-size:15.5px;line-height:1.6;white-space:pre-wrap;color:var(--ink)}
+.cm i{font-style:normal;font-size:11px;color:var(--sub);margin-left:6px}.cm u{font-size:12px;margin-left:8px;cursor:pointer;color:#b04040;text-decoration:none}
+.cr{display:flex;gap:8px;margin-top:8px}.cr .tin{flex:1;min-width:0}.cs{width:auto;margin:0;padding:0 18px;font-size:15px;font-weight:700;border-radius:12px}
+.cf .tin{padding:10px 12px;font-size:15px}
+.nb{font-size:14px;padding:12px 2px}
+.vcnt{text-align:center;font-size:12px;color:var(--sub);margin:-18px 0 14px;opacity:.9}.vcnt b{color:var(--ink);font-variant-numeric:tabular-nums}
+.bx{height:100px;box-sizing:border-box;padding:0;display:flex;flex-direction:column;justify-content:center;align-items:center;overflow:hidden}
+.bx b{height:34px;line-height:34px;font-size:28px;display:block}.bx i{line-height:18px}.bx u{line-height:16px}
+.pillars{align-items:stretch}.p{display:flex;flex-direction:column}
+.ansed{margin-top:10px}.ansed textarea{min-height:80px;margin-bottom:6px}
+</style>
+</head>
+<body>
+<main>
+<h1>MZu's 도파민 사주 <svg viewBox="0 0 32 32" width="30" height="30" aria-hidden="true" style="vertical-align:-4px;margin-left:2px"><defs><linearGradient id="hg" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#ff9ec7"/><stop offset="1" stop-color="#b9a4ff"/></linearGradient></defs><path d="M16 28.5C6 21.2 3 16 3 11.2 3 7.2 6 4.5 9.6 4.5c2.6 0 4.7 1.4 6.4 3.9 1.7-2.5 3.8-3.9 6.4-3.9C26 4.5 29 7.2 29 11.2c0 4.8-3 10-13 17.3z" fill="url(#hg)"/><path d="M9.5 9.2c-2 .6-3 2.4-2.7 4.3" stroke="#fff" stroke-opacity=".8" stroke-width="2" stroke-linecap="round" fill="none"/></svg></h1>
+<p class="by">Made by <a href="https://www.instagram.com/memezoo_mzu" target="_blank" rel="noopener noreferrer"><svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-label="Instagram" style="vertical-align:-3px"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg> MZu</a></p>
+<p class="lead">내 성격, 돈복, 매력, 연애는 어떻게 나올까?</p>
+<p class="vcnt" id="vc" style="display:none">👀 오늘 <b id="vt">-</b> · 전체 <b id="va">-</b></p>
+
+<div class="nav" id="nav"><button type="button" class="nb on" data-v="saju">🔮 사주 보기</button><button type="button" class="nb" data-v="board">💌 질문·건의</button><button type="button" class="nb" data-v="chat">💬 방명록</button></div>
+<div id="shared"></div>
+<form class="card" id="f" onsubmit="return false">
+<label>생년월일</label><div class="row" style="margin-bottom:8px"><label class="seg"><input type="radio" name="c" value="s" checked><span>양력</span></label><label class="seg"><input type="radio" name="c" value="l"><span>음력</span></label></div>
+<div class="row"><input type="number" id="yy" inputmode="numeric" placeholder="년 (1995)"><input type="number" id="mm" inputmode="numeric" placeholder="월"><input type="number" id="dd" inputmode="numeric" placeholder="일"></div><div class="chk" id="lp" style="display:none"><input type="checkbox" id="lm"><label for="lm" style="margin:0">윤달이에요</label></div>
+<label>태어난 시간</label>
+<div class="chk" style="margin:0 0 8px"><input type="checkbox" id="nt"><label for="nt" style="margin:0">시간은 몰라요</label></div>
+<div class="row" id="tm"><input type="number" id="hh" inputmode="numeric" placeholder="시 (0~23)"><input type="number" id="mn" inputmode="numeric" placeholder="분 (0~59)"></div>
+<div class="hint">24시간제예요 · 오후 11시 31분 → 23시 31분</div>
+<label>성별</label>
+<div class="row">
+<label class="seg"><input type="radio" name="g" value="m" checked><span>남</span></label>
+<label class="seg"><input type="radio" name="g" value="f"><span>여</span></label>
+</div>
+<button id="go">내 사주 보기</button>
+<div class="err" id="err"></div>
+</form>
+
+<div id="out"></div>
+<section id="chat">
+<h2 style="margin-top:12px">💬 방명록</h2>
+<p class="bnote">로그인 없이 누구나 익명으로 한마디 남겨요. 서로 예쁜 말만 써요 💗 (링크·광고는 막혀 있어요)</p>
+<div class="card" style="padding:14px"><div id="cl" class="cl"></div>
+<div class="cf"><input type="text" id="cn" class="tin" maxlength="16" placeholder="닉네임"><div class="cr"><input type="text" id="ct" class="tin" maxlength="200" placeholder="한마디 남기기 (200자)"><button type="button" id="cs" class="cs">보내기</button></div><div class="err" id="ce"></div></div></div>
+</section>
+<section id="board">
+<h2 style="margin-top:12px">MZu에게 질문·건의</h2>
+<p class="bnote">사주 궁금한 점(예: "목이 많대요, 특징이 뭐예요?")이나 만들어줬으면 하는 콘텐츠를 남겨주세요. MZu가 직접 답해줘요. 🔒 비공개로 쓰면 비밀번호로만 열 수 있어요. 생년월일·연락처 같은 개인정보는 적지 마세요.</p>
+<form class="card" id="bf" onsubmit="return false">
+<div class="row" style="margin-bottom:10px"><label class="seg"><input type="radio" name="bc" value="q" checked><span>사주 질문</span></label><label class="seg"><input type="radio" name="bc" value="req"><span>건의·콘텐츠 요청</span></label></div>
+<label>닉네임 (비우면 익명)</label><input type="text" id="bn" maxlength="20" placeholder="닉네임" class="tin">
+<label>내용 (5자 이상)</label><textarea id="bt" maxlength="600" rows="4" placeholder="예) 저는 사주에 목이 많대요. 어떤 특징이 있나요?" class="tin"></textarea>
+<label>비밀번호 (내 글 열기·삭제용, 4자 이상)</label><input type="password" id="bp" maxlength="30" placeholder="비밀번호" class="tin" autocomplete="new-password">
+<div class="chk"><input type="checkbox" id="bv"><label for="bv" style="margin:0">🔒 비공개로 쓸래요 (MZu와 나만 볼 수 있어요)</label></div>
+<button id="bs" type="button">남기기</button><div class="err" id="be"></div>
+</form>
+<div id="bl"></div>
+<p class="note"><a href="#" id="adm" style="color:inherit">관리자</a></p>
+</section>
+<p class="note">재미로 보는 풀이예요. 사주 입력 정보는 서버로 전송되지 않고 이 브라우저 안에서만 계산돼요. (게시판 글만 저장돼요)</p>
+
+</main>
+<script>
+const S="갑을병정무기경신임계",B="자축인묘진사오미신유술해";
+const SH="甲乙丙丁戊己庚辛壬癸",BH="子丑寅卯辰巳午未申酉戌亥";
+const SE=[0,0,1,1,2,2,3,3,4,4],BE=[4,2,0,0,2,1,1,2,3,3,2,4];
+const EN=["목","화","토","금","수"];
+const DM=["큰 나무 — 곧고 추진력 있는 리더형","풀과 덩굴 — 유연하고 적응력 좋은 타입","태양 — 밝고 열정적인 분위기 메이커","촛불 — 섬세하고 은근히 따뜻한 사람","큰 산 — 듬직하고 중심이 단단한 사람","논밭 — 포용력 있고 실속 챙기는 사람","바위와 쇠 — 의리 있고 결단이 빠른 사람","보석 — 예리하고 감각이 섬세한 사람","바다 — 생각이 깊고 스케일이 큰 사람","이슬비 — 직관 좋고 감성이 풍부한 사람"];
+const SJ=0,BJ=1;
+function rel(me,x){if(x==me)return 0;if((me+1)%5==x)return 1;if((me+2)%5==x)return 2;if((x+2)%5==me)return 3;return 4}
+function calc(y,m,d,h,mi){
+ const md=m*100+d;
+ const ty=md<204?y-1:y;
+ const yi=((ty-4)%60+60)%60;
+ const T=[[1207,0],[1107,11],[1008,10],[908,9],[808,8],[707,7],[606,6],[506,5],[405,4],[306,3],[204,2],[106,1]];
+ let mb=0;for(const[t,b]of T){if(md>=t){mb=b;break}}
+ const ms=((yi%10%5)*2+2+(mb-2+12)%12)%10;
+ const di=Math.round((Date.UTC(y,m-1,d)-Date.UTC(2000,0,1))/864e5);
+ const tt=h===null?0:h*60+mi;const dx=((54+di+(tt>=1410?1:0))%60+60)%60;
+ const P=[{s:yi%10,b:yi%12},{s:ms,b:mb},{s:dx%10,b:dx%12}];
+ if(h!==null){const hb=Math.floor(((tt+30)%1440)/120);P.push({s:((dx%10%5)*2+hb)%10,b:hb})}
+ return P;
+}
+function T3(a,v){return a[v<68?0:v<82?1:2]}
+const TX={
+눈치:["직설적이고 솔직한 편이에요. 분위기보다 본론이 먼저라 가끔 '눈치 없다'는 말을 들을 수 있지만, 뒤끝 없는 게 장점이에요.","필요할 땐 분위기를 읽고 필요 없을 땐 신경 끄는, 균형 잡힌 눈치를 가졌어요.","표정 하나, 말투 하나로 상대 기분을 읽어내는 레이더형. 다만 너무 신경 쓰다 혼자 지칠 수 있어요."],
+연애능력:["연애에 서툴거나 천천히 가는 타입이에요. 마음을 열면 오래, 깊게 가는 스타일이에요.","끌림과 안정감 사이에서 균형을 잘 잡아요. 한번 마음 주면 꾸준해요.","매력과 표현력이 좋아 인연이 끊이지 않는 편이에요. 대신 선택이 많아 고민도 많아요."],
+처세술:["자기 소신이 강해서 맞추는 건 약간 어려워요. 대신 믿고 맡길 수 있는 사람이라는 평을 들어요.","적당히 맞추고 적당히 지키는 무난한 처세가 가능해요.","어느 자리에서든 포지션을 잘 잡는 사회생활 고수예요. 사람 덕이 따라오는 구조예요."],
+판단력:["직관과 순발력으로 움직여요. 빠르지만 가끔 후회할 수 있으니 중요한 건 하루 묵혀보세요.","감과 분석이 적당히 섞인 안정적인 판단을 해요.","정보를 충분히 모으고 신중하게 결정하는 타입이에요. 판단이 정확한 만큼 시간이 걸릴 때도 있어요."],
+말빨:["말보다 행동으로 보여주는 쪽이에요. 한마디 한마디가 묵직해서 말수가 적어도 신뢰가 가요.","필요한 말을 필요한 때에 하는 깔끔한 화법이에요.","분위기를 휘어잡는 입담의 소유자예요. 설득과 농담, 둘 다 잘해요."],
+글빨:["짧고 굵게 쓰는 스타일이에요. 길게 쓰기보다 핵심을 찌르는 쪽이 맞아요.","읽기 편한 담백한 글을 써요. 연습하면 금방 늘어요.","감성과 논리를 함께 담는 글솜씨예요. 기록하고 글 쓰는 일이 잘 맞아요."],
+돈버는능력:["큰돈을 쫓기보다 꾸준히 모으는 쪽이 어울려요. 기술이나 전문성으로 안정적인 수입을 만드는 게 좋아요.","수입 구조를 차근차근 키워갈 수 있어요. 본업과 부업을 병행하면 효과가 커요.","돈의 흐름을 읽는 감각이 있어요. 기회가 오면 과감하게 잡는 편이라 수입 규모를 키울 잠재력이 커요."]
+};
+const TX2={
+눈치:["돌려 말하는 것보다 솔직하게 말하는 게 편한 타입이에요. 분위기보다 사실 위주로 반응하다 보니 가끔 눈치 없다는 소리를 들을 수 있어요. 하지만 뒤끝이 없고 속이 보여서 오히려 편하다는 사람도 많아요. 중요한 자리에선 한 박자 쉬고 상대 표정을 살피면 훨씬 좋아져요.","필요할 땐 분위기를 읽고, 필요 없을 땐 신경 끄는 균형 잡힌 눈치예요. 상대가 불편해하는 순간은 대체로 알아차리지만 모든 걸 맞추려고 하진 않아요. 그래서 편안하다는 평을 듣기 쉽고, 피곤할 정도로 눈치 보는 일도 적어요.","표정, 말투, 침묵의 길이까지 읽어내는 레이더 같은 눈치예요. 상대가 말하기 전에 뭘 원하는지 먼저 알아채서 센스 있다는 말을 자주 들어요. 다만 너무 많이 읽다 보니 혼자 신경 쓰고 지칠 수 있어요. 때로는 모른 척하는 것도 능력이에요."],
+연애능력:["연애에선 조금 느리고 서툰 편이에요. 마음이 있어도 표현하지 못하거나 타이밍을 놓치기 쉬워요. 대신 한번 마음을 열면 깊고 오래 가는 스타일이라 진지한 관계에서 빛나요. 작은 표현이라도 말로 하는 연습이 연애운을 크게 올려줘요.","끌림과 안정감 사이에서 균형을 잘 잡는 연애 스타일이에요. 밀고 당기기보다 자연스럽게 가까워지는 걸 좋아하고, 한번 마음을 주면 꾸준해요. 상대의 이야기를 잘 들어주는 점이 가장 큰 무기예요.","매력과 표현력이 좋아서 인연이 끊이지 않는 편이에요. 호감을 얻는 법을 본능적으로 알고 관계의 온도 조절도 잘해요. 다만 선택지가 많아 고민이 길어지거나 쉽게 설레고 쉽게 식을 수 있으니, 진짜 원하는 사람의 기준을 정해두면 좋아요."],
+처세술:["소신이 강하고 타협이 쉽지 않은 타입이에요. 요령 좋게 비위 맞추는 건 어렵지만 그만큼 믿고 맡길 수 있는 사람이라는 평을 들어요. 윗사람이나 어려운 자리에서는 결론 전에 한마디만 더 얹으면 손해를 크게 줄일 수 있어요.","적당히 맞추고 적당히 지키는 무난한 처세를 해요. 조직 안에서 튀지도 묻히지도 않는 안정적인 포지션을 잡고, 갈등이 생겨도 크게 번지지 않게 정리하는 힘이 있어요.","어느 자리에서든 내 포지션을 정확히 잡는 사회생활 고수예요. 누구와 친해져야 하는지, 언제 나서고 빠질지 감이 좋아서 사람 덕이 따라와요. 다만 모두에게 잘하려다 정작 내 마음을 놓칠 수 있으니 가끔은 싫다고 말하는 연습도 필요해요."],
+판단력:["직관과 순발력으로 움직이는 타입이에요. 결정이 빠르고 실행도 빠른 대신 확인이 부족해서 후회할 때가 있어요. 큰 결정은 하루만 묵혔다가 체크리스트로 한 번 점검하면 실수가 확 줄어요.","감과 분석이 적당히 섞인 안정적인 판단을 해요. 정보가 충분하면 정확하고, 부족해도 크게 틀리지 않는 감각이 있어요. 주변 의견을 한두 명만 더 들으면 완성도가 높아져요.","정보를 충분히 모으고 따져본 뒤 결정하는 신중한 판단형이에요. 결과의 정확도가 높아 주변에서 조언을 구하는 일이 많아요. 다만 생각이 길어져 타이밍을 놓칠 수 있으니 마감 기한을 정해두고 결정하는 걸 추천해요."],
+말빨:["말보다 행동으로 보여주는 쪽이에요. 말수는 적지만 한마디가 묵직해서 신뢰가 가요. 설득이 필요한 자리에서는 핵심을 세 줄로 정리해서 말하면 전달력이 크게 좋아져요.","필요한 말을 필요한 때에 하는 깔끔한 화법이에요. 장황하지 않아 듣는 사람이 편하고 정리해서 설명하는 능력이 있어요. 유머를 한 스푼 더하면 매력이 확 올라가요.","분위기를 휘어잡는 입담의 소유자예요. 설득도 잘하고 농담도 잘해서 어디서든 대화의 중심이 되기 쉬워요. 말이 빠른 만큼 가끔 실언이 생길 수 있으니 중요한 말은 한 번 더 걸러서 하면 완벽해요."],
+글빨:["길게 쓰는 것보다 짧고 굵게 쓰는 게 맞는 타입이에요. 핵심만 찌르는 문장이 오히려 힘이 있어요. 결론, 이유, 예시 순서로 구조만 잡아두면 금방 글이 좋아져요.","읽기 편한 담백한 글을 써요. 어렵게 꾸미지 않아서 전달력이 좋고, 연습하면 빠르게 느는 스타일이에요. 일기나 짧은 후기부터 꾸준히 써보면 실력이 눈에 띄게 늘어요.","감성과 논리를 함께 담는 글솜씨예요. 같은 이야기도 술술 읽히게 풀어내서 기획서, 블로그, 에세이 모두 잘 어울려요. 글로 돈을 벌 수도 있는 재능이니 기록을 습관으로 만들어 보세요."],
+돈버는능력:["큰돈을 한 방에 노리기보다 꾸준히 쌓아 가는 쪽이 어울려요. 기술이나 전문성으로 안정적인 수입을 만들고 지출 관리부터 단단히 하면 자산이 천천히 불어나요. 무리한 투자나 보증은 피하는 게 좋아요.","수입 구조를 차근차근 키워갈 수 있는 타입이에요. 본업에 부업이나 투자 하나를 더하면 효과가 커요. 돈이 들어오는 길을 두세 개로 나눠두면 훨씬 안정적이에요.","돈의 흐름을 읽는 감각이 있어요. 기회가 보이면 과감하게 잡는 편이라 수입 규모를 키울 잠재력이 커요. 다만 들어오는 만큼 나가기도 쉬우니 저축과 투자 비율을 자동화해 두는 걸 추천해요."]};
+TX2.정신력=['마음이 섬세해서 주변 말과 분위기에 쉽게 흔들리는 편이에요. 걱정이 한번 시작되면 꼬리를 물고 이어져서 지치는 날도 있어요. 하지만 감정에 민감하다는 건 공감 능력이 높다는 뜻이기도 해요. 환경을 정리하고 나만의 루틴을 만들면 의외로 빨리 안정을 되찾는 타입이에요.','평소에는 담담하게 버티다가 크게 힘든 일이 생기면 잠깐 흔들리지만 금세 중심을 되찾는 정신력이에요. 스트레스를 받아도 스스로 수습하는 힘이 있고, 주변 도움을 받으면 회복이 더 빨라요. 무리하게 참기보다 적당히 풀어주는 습관이 있으면 오래 단단하게 갈 수 있어요.','웬만한 일에는 흔들리지 않는 강철 멘탈형이에요. 위기 상황에서도 차분하게 해결책을 찾고, 실패해도 다시 일어서는 회복력이 뛰어나요. 다만 힘든 걸 혼자 삭이다 한꺼번에 지칠 수 있으니 속마음을 나눌 사람이 꼭 필요해요. 단단함 속에 여유를 챙기면 더 좋아요.'];
+const TIP={
+정신력:['마음이 지치는 날엔 억지로 버티지 말고 쉬는 시간을 일정에 먼저 넣어두세요. 믿을 수 있는 사람 한두 명에게 털어놓는 것만으로도 회복 속도가 크게 달라져요.','단단한 만큼 혼자 다 짊어지려는 경향이 있어요. 가끔은 약한 모습을 보여도 괜찮고, 그게 오히려 관계를 더 깊게 만들어줘요.'],
+눈치:['상대 말을 끝까지 듣고 한 번 되묻는 습관만 들여도 오해가 확 줄어요. 상대 표정이 굳을 때는 화제를 바꿔보는 것도 좋은 방법이에요.','눈치가 빠른 건 큰 재능이지만 모든 걸 내 책임으로 느끼지는 마세요. 상대 감정은 상대 몫이라고 선을 긋는 연습이 마음 건강에 도움이 돼요.'],
+연애능력:['호감이 가는 사람에겐 작은 안부 한마디부터 시작해 보세요. 완벽한 타이밍을 기다리기보다 가볍게 다가가는 쪽이 인연을 만들어줘요.','관계가 쉽게 풀리는 만큼 상대에게 진심인지 스스로 점검하는 시간이 필요해요. 한 사람에게 깊이 집중할수록 연애운이 단단해져요.'],
+처세술:['내 의견을 말하기 전에 그럴 수 있겠네요 한마디를 먼저 붙여 보세요. 같은 말도 훨씬 부드럽게 전달되고 적도 줄어요.','넓은 인맥을 유지하는 만큼 에너지 관리가 중요해요. 진짜 내 편이 누구인지 가려서 깊게 챙기는 것도 처세의 한 부분이에요.'],
+판단력:['결정 전에 최악의 경우를 한 번만 상상해 보세요. 대비책이 있다면 과감하게 가고, 없다면 한 번 더 확인하고 움직이면 돼요.','완벽한 정보를 기다리다 기회를 놓치지 않도록 70% 확신이 들면 움직인다는 기준을 세워 보세요. 결정 후에는 뒤돌아보지 않는 연습도 필요해요.'],
+말빨:['중요한 대화 전에 할 말 세 가지만 메모해 두면 훨씬 자신 있게 말할 수 있어요. 말을 줄이는 건 약점이 아니라 개성이라는 점도 기억하세요.','말이 잘 통하는 사람일수록 듣는 시간이 신뢰를 만들어요. 상대 말을 끝까지 듣고 답하는 습관이 말빨을 한 단계 올려줘요.'],
+글빨:['하루 세 줄 기록부터 시작해 보세요. 쓰는 양이 쌓이면 어느 순간 문장이 자연스럽게 흘러요. 좋아하는 글을 필사해 보는 것도 도움이 돼요.','생각을 글로 정리하는 습관이 판단과 인간관계에도 좋은 영향을 줘요. 블로그나 SNS에 꾸준히 올리면 기회가 되어 돌아올 수 있어요.'],
+돈버는능력:['고정 지출을 먼저 파악하고 매달 일정 금액을 자동이체로 빼두는 것부터 시작하세요. 작은 수입원 하나를 더 만들면 마음이 훨씬 편해져요.','수입이 커질수록 지출 습관이 더 중요해요. 목돈은 쓰는 계좌와 분리하고, 투자는 공부한 만큼만 하는 원칙을 세워두세요.']};
+const MB={INTJ:['전략가','계획적이고 독립적이며 큰 그림을 설계하는 타입이에요.'],INTP:['논리술사','호기심 많고 분석적이며 원리를 파고드는 타입이에요.'],ENTJ:['통솔자','목표 지향적이고 결단력 있는 리더형이에요.'],ENTP:['변론가','아이디어가 넘치고 토론을 즐기는 타입이에요.'],INFJ:['옹호자','통찰력 있고 신념이 깊은 이상주의자예요.'],INFP:['중재자','감성적이고 가치관이 뚜렷한 몽상가 타입이에요.'],ENFJ:['선도자','사람을 이끌고 챙기는 따뜻한 리더예요.'],ENFP:['활동가','열정적이고 자유로운 분위기 메이커예요.'],ISTJ:['현실주의자','책임감 강하고 원칙을 지키는 성실파예요.'],ISFJ:['수호자','헌신적이고 세심하게 사람을 챙기는 타입이에요.'],ESTJ:['경영자','체계적이고 실행력이 강한 관리자형이에요.'],ESFJ:['집정관','사교적이고 주변을 살뜰히 챙기는 타입이에요.'],ISTP:['장인','침착하고 문제 해결에 능한 실용파예요.'],ISFP:['모험가','온화하고 감각적이며 자유를 사랑하는 타입이에요.'],ESTP:['사업가','행동이 빠르고 현실 감각이 뛰어난 타입이에요.'],ESFP:['연예인','에너지 넘치고 순간을 즐기는 사교가예요.']};
+const CH={
+성격:["한번 정한 방향으로 곧게 뻗어가는 성격이에요. 책임감이 강하고 리더 역할을 자연스럽게 맡지만, 고집이 세서 꺾이는 걸 싫어해요.","겉은 부드럽고 속은 끈질긴 성격이에요. 환경에 맞춰 유연하게 변하며 끝까지 살아남는 생활력이 있고, 눈치가 빠르지만 속마음은 잘 안 드러내요.","숨김없이 밝고 에너지 넘치는 성격이에요. 사람들을 끌어당기는 열정이 있지만 화도 금방 나고 금방 풀리는 급한 면이 있어요.","차분하고 섬세하며 속정이 깊은 성격이에요. 한 사람, 한 가지에 오래 집중하는 힘이 있지만 상처도 오래 기억하는 편이에요.","무게감 있고 믿음직한 성격이에요. 쉽게 흔들리지 않고 포용력이 크지만 변화에는 느리고 속을 잘 안 보여줘요.","겸손하고 실속 있는 성격이에요. 사람을 키우고 챙기는 데 능하고 현실 감각이 좋지만, 걱정이 많아 생각이 길어지는 면이 있어요.","의리와 결단력이 강한 성격이에요. 옳고 그름이 분명해서 시원시원하지만 말투가 직설적이라 오해를 사기도 해요.","예민하고 감각이 뛰어난 완벽주의 성격이에요. 자존심이 강하고 디테일에 강하지만 상처받은 마음을 쉽게 풀지 못해요.","생각이 깊고 스케일이 큰 성격이에요. 지혜롭고 적응력이 좋으며 자유로운 영혼이지만 한곳에 매이는 걸 답답해해요.","직관과 감수성이 풍부한 성격이에요. 조용히 스며드는 영리함과 높은 공감 능력이 있지만, 생각이 많아 걱정이 쉽게 커져요."],
+매력:["믿음직한 리더십과 곧은 눈빛이 매력이에요. 말은 적어도 중심을 잡아주는 든든함에 사람들이 의지해요.","부드러운 분위기와 센스 있는 배려가 매력이에요. 곁에 있으면 편안하고 자꾸 챙겨주고 싶은 사람이에요.","존재만으로 분위기가 환해지는 밝은 에너지가 매력이에요. 솔직하고 시원한 리액션에 사람들이 끌려요.","은은하고 따뜻한 눈빛과 섬세한 배려가 매력이에요. 알수록 빠져드는 슬로우 스타일 매력이에요.","흔들리지 않는 안정감과 넉넉한 품이 매력이에요. 말없이 곁을 지켜주는 든든함이 있어요.","다정하고 실속 있는 따뜻함이 매력이에요. 사소한 것까지 챙겨주는 생활형 배려에 사람들이 감동해요.","시원시원한 결단력과 의리가 매력이에요. 한 번 내 사람이면 끝까지 챙기는 강단에 반해요.","세련된 감각과 단정한 이미지가 매력이에요. 차갑게 보이다가 가까워지면 보이는 반전이 큰 무기예요.","깊이를 알 수 없는 신비로움과 넓은 포용력이 매력이에요. 대화가 잘 통하고 자유로운 분위기에 끌려요.","촉촉한 감성과 맑은 분위기가 매력이에요. 공감 능력이 좋아서 이야기를 들어주는 것만으로 마음을 사로잡아요."],
+강점:["목표를 정하면 밀고 나가는 추진력과 책임감이 가장 큰 강점이에요. 팀을 이끌고 방향을 제시하는 일에 강해요.","유연한 적응력과 끈기가 강점이에요. 어떤 환경에서도 살아남고 사람 사이를 잇는 조율에 능해요.","열정과 표현력이 강점이에요. 분위기를 띄우고 사람을 모으는 힘이 있고, 일을 시작하는 추진력이 좋아요.","집중력과 섬세함이 강점이에요. 한 분야를 깊게 파고드는 끈기와 사람 마음을 읽는 능력이 있어요.","중심을 잡는 안정감과 신뢰가 강점이에요. 큰 일을 맡겨도 흔들리지 않는 묵직함이 있어요.","현실 감각과 관리 능력이 강점이에요. 사람과 일을 차근차근 키워내는 실무형 능력자예요.","결단력과 실행력이 강점이에요. 위기 때 빠르게 정리하고 밀어붙이는 힘이 있어요.","분석력과 완성도가 강점이에요. 디테일을 놓치지 않고 결과물의 퀄리티를 끌어올려요.","큰 그림을 보는 안목과 지혜가 강점이에요. 정보 수집과 흐름 파악, 아이디어 확장에 능해요.","직관과 통찰력이 강점이에요. 조용히 관찰해서 핵심을 짚어내고 연구와 기획에 재능이 있어요."],
+약점:["고집과 자존심이 약점이에요. 굽히지 않다가 관계나 기회를 놓칠 수 있으니 한 템포 유연함이 필요해요.","우유부단하고 속마음을 숨기는 게 약점이에요. 눈치를 보다 하고 싶은 말을 삼키지 않게 주의하세요.","급한 성격과 끈기 부족이 약점이에요. 시작은 화려한데 마무리가 약해질 수 있어요.","예민함과 뒤끝이 약점이에요. 작은 말에 오래 상처받고 혼자 삭이다 지칠 수 있어요.","변화에 느리고 고집이 센 게 약점이에요. 마음을 표현하지 않아 오해가 쌓이기도 해요.","걱정과 눈치가 많은 게 약점이에요. 남을 챙기다 내 것을 놓치고 소심해질 수 있어요.","직설적인 말투와 강한 승부욕이 약점이에요. 상대에게 상처를 주고 나서 후회하기도 해요.","예민함과 완벽주의가 약점이에요. 스스로를 몰아붙이다 쉽게 지치고 서운함을 오래 담아둬요.","산만함과 끈기 부족이 약점이에요. 생각이 많아 실행이 늦어지거나 한곳에 정착하기 힘들어요.","걱정이 많고 감정 기복이 있는 게 약점이에요. 혼자 상상하다 불안이 커지지 않게 주의하세요."],
+이성:["내 고집을 받아주면서도 할 말은 하는 침착하고 현명한 사람이 잘 맞아요. 부드럽지만 기준이 확실한 상대, 서로의 목표를 응원하는 관계가 오래 가요.","든든하게 중심을 잡아주는 안정적인 사람이 어울려요. 말수가 적어도 약속을 지키는 신뢰형 상대와 함께하면 마음이 편해져요.","열정을 받아주면서 차분하게 식혀주는 사람이 어울려요. 내 에너지를 지지해 주는 포용력 있는 상대면 오래 가요.","따뜻하고 안정적이며 표현이 확실한 사람이 어울려요. 섬세한 마음을 알아주고 먼저 다가와 주는 상대가 좋아요.","활발하고 표현이 풍부한 사람이 어울려요. 내가 놓치는 분위기를 밝혀주고 새로운 자극을 주는 상대와 균형이 맞아요.","나를 믿고 이끌어주는 듬직한 사람이 어울려요. 내가 걱정할 때 결단해 주고 안심시켜 주는 상대가 잘 맞아요.","따뜻하고 지혜롭게 내 날을 눌러주는 사람이 어울려요. 거친 말에도 상처받지 않고 감정을 받아주는 상대가 좋아요.","속 깊고 여유 있는 사람이 어울려요. 예민함을 이해하고 편안하게 감싸주는 포용형 상대와 함께하면 안정돼요.","중심을 잡아주는 현실적이고 단단한 사람이 어울려요. 자유로운 나를 이해하면서도 방향을 잡아주는 상대가 좋아요.","따뜻하고 안정적으로 곁에 있어 주는 사람이 어울려요. 감정의 기복을 편안하게 받아주는 포용력 있는 상대가 잘 맞아요."]};
+CH.이성2=['겉으로는 순해 보여도 속에 자기 기준이 단단한 사람, 그리고 일이나 목표에 진지한 사람과 궁합이 좋아요. 반대로 내 의견에 무조건 따르기만 하는 사람은 금방 지루해질 수 있고, 같은 고집형끼리는 부딪치기 쉬우니 한쪽이 먼저 한발 물러서는 관계가 오래 가요.','대화가 통하고 약속을 잘 지키는 사람이 가장 편해요. 감정 기복이 크거나 말을 돌려 하는 사람은 쉽게 지치게 하니 피하는 게 좋고, 내가 눈치를 보지 않아도 되는 솔직한 사람을 만나면 숨겨둔 매력이 활짝 열려요.','표현이 솔직하고 뒤끝 없는 사람과 잘 맞아요. 나를 통제하려 하거나 감정을 차갑게 식히는 사람은 맞지 않고, 내 열정을 귀엽게 봐주는 상대가 오래 가요. 다투더라도 바로 풀 수 있는 대화 방식을 가진 사람인지 꼭 보세요.','말보다 행동으로 마음을 보여주는 진중한 사람이 좋아요. 가볍게 감정을 소비하는 사람은 큰 상처가 될 수 있으니 천천히 사귀면서 확인하세요. 내 섬세함을 예민하다고 하지 않고 고마워해 주는 사람이 진짜 인연이에요.','약속을 지키고 책임감 있는 사람과 편안하게 이어져요. 너무 빠르게 변하고 즉흥적인 사람과는 속도가 안 맞아 서운해질 수 있어요. 마음이 느리게 열리는 만큼 시간을 두고 신뢰를 쌓아주는 상대를 만나면 평생 가요.','배려가 있으면서 확신을 주는 사람이 좋아요. 애매하게 행동하는 사람 때문에 혼자 속앓이하기 쉬우니, 마음을 분명하게 표현해 주는 상대가 잘 맞아요. 내가 챙겨주는 만큼 고마움을 아는 사람인지 꼭 확인하세요.','존중하고 솔직하게 말해주는 사람과 궁합이 좋아요. 내 직설을 상처로 받는 여린 사람은 서로 힘들 수 있고, 잘잘못을 따질 때 감정 없이 대화할 수 있는 사람이 이상적이에요. 의리를 아는 사람이면 금상첨화예요.','품위 있고 말이 통하는 사람이 어울려요. 말을 함부로 하거나 약속을 가볍게 여기는 사람은 마음의 문을 닫게 만들고, 내 감각과 취향을 인정해 주는 사람이 오래 가요. 서운한 건 바로 말해주는 솔직한 상대가 좋아요.','서로의 자유를 존중하는 관계가 가장 중요해요. 지나치게 구속하거나 감시하는 사람은 숨이 막히고, 각자의 시간을 인정하면서 중요한 순간엔 곁을 지켜주는 사람이 이상적이에요. 대화가 끊이지 않는 지적인 상대면 더 좋아요.','섬세하게 배려하면서도 감정 표현이 분명한 사람이 좋아요. 무뚝뚝하고 표현이 적은 사람은 불안을 키울 수 있으니 확신을 주는 상대를 만나세요. 내가 생각이 많아질 때 가볍게 웃게 해주는 사람이 최고의 인연이에요.'];
+const EXT={
+매력:['여기에 더해 성장하는 사람 특유의 싱그러움이 있어요. 목표를 향해 꾸준히 자라는 모습이 보일수록 호감도가 올라가고, 처음엔 평범해 보여도 만날수록 믿음이 쌓이는 슬로우 매력형이에요. 자연스러운 모습을 그대로 보여줄 때 가장 빛나요.','여기에 더해 표정과 말투에서 나오는 생기가 큰 무기예요. 웃는 모습과 리액션만으로도 분위기를 바꾸고, 처음 만난 사람도 금방 편하게 만드는 힘이 있어요. 솔직하게 감정을 표현할수록 매력이 더 선명해져요.','여기에 더해 같이 있으면 마음이 놓이는 안정감이 있어요. 화려하진 않아도 오래 볼수록 괜찮은 사람이라는 평가를 받고, 한번 신뢰를 얻으면 주변에서 믿고 기대는 존재가 돼요. 말보다 태도로 호감을 얻는 타입이에요.','여기에 더해 깔끔하고 단정한 인상이 신뢰감을 줘요. 선이 분명하고 말에 군더더기가 없어서 일 잘하는 사람이라는 이미지가 강하고, 가끔 보이는 의외의 다정함이 반전 매력으로 작용해요. 한번 마음을 열면 깊게 챙기는 점도 큰 매력이에요.','여기에 더해 생각이 깊고 말이 잘 통한다는 인상을 줘요. 상대의 이야기를 흘리지 않고 들어주는 태도에서 매력이 나오고, 처음엔 조용해 보여도 대화하다 보면 깊이 있다는 평을 듣는 타입이에요. 알아갈수록 빠져드는 사람이에요.'],
+강점:['여기에 더해 배우고 성장하는 속도가 빨라요. 새로운 분야에 들어가도 금방 적응하고, 시간이 지날수록 실력이 쌓이는 장기전에 강한 타입이에요. 목표를 눈에 보이게 적어두면 추진력이 두 배가 돼요.','여기에 더해 사람을 움직이는 에너지가 있어요. 분위기를 만들고 모두를 신나게 하는 능력이라 발표, 영업, 기획처럼 앞에 서는 일에서 두각을 나타내요. 처음 시작하는 순간의 폭발력이 가장 큰 무기예요.','여기에 더해 약속과 책임을 끝까지 지키는 성실함이 있어요. 위기 때 흔들리지 않고 중심을 잡아서 팀에서 믿음직한 사람으로 꼽혀요. 꾸준히 쌓는 일에 강해서 시간이 갈수록 평가가 높아지는 타입이에요.','여기에 더해 판단이 빠르고 정리를 잘해요. 복잡한 상황에서도 핵심을 가려내서 결론을 내고, 맡은 일은 깔끔하게 마무리해요. 원칙과 기준이 분명해서 결정이 필요한 자리에서 특히 빛나요.','여기에 더해 정보를 모으고 연결하는 능력이 뛰어나요. 흐름을 읽는 눈이 좋아 변화에 빨리 대응하고, 아이디어를 확장하는 일에 강해요. 혼자 깊이 생각하는 시간이 곧 경쟁력이 되는 타입이에요.'],
+약점:['여기에 더해 마음이 급해지면 주변을 못 보고 밀어붙이는 면이 있어요. 계획이 틀어졌을 때 스트레스를 크게 받고, 꺾이는 상황에서는 쉽게 의욕이 떨어질 수 있어요. 목표를 작게 쪼개서 성취감을 자주 느끼면 훨씬 안정돼요.','여기에 더해 감정이 얼굴에 바로 드러나서 손해를 볼 때가 있어요. 열정이 클수록 식었을 때 낙차도 커서 번아웃이 오기 쉬워요. 하루 중 에너지를 조절하는 시간을 따로 두면 오래 가요.','여기에 더해 걱정이 많아서 시작을 망설이다 기회를 놓칠 수 있어요. 변화를 두려워해 익숙한 곳에 오래 머무르는 경향이 있으니, 작은 새 시도를 의식적으로 늘려 보세요. 속마음을 말로 꺼내는 연습도 필요해요.','여기에 더해 기준이 높아서 스스로와 남에게 엄격해지기 쉬워요. 말이 날카롭게 나가 관계에 거리가 생길 수 있고, 인정받지 못한다고 느끼면 마음의 문을 쉽게 닫아요. 칭찬과 고마움을 말로 표현해 보세요.','여기에 더해 생각이 너무 많아 실행이 늦어지기 쉬워요. 감정이 가라앉을 때는 혼자 깊이 파고들어 우울해질 수 있고, 마음을 숨겨서 오해를 사기도 해요. 생각을 글이나 대화로 꺼내 정리하는 습관이 도움이 돼요.']};
+CH.이성3=['이런 사람은 모임이나 스터디, 운동처럼 같은 목표를 향해 움직이는 자리에서 만나기 쉬워요. 사귀기 시작한 뒤에는 결정을 혼자 내리지 말고 상대 의견을 먼저 물어보는 것이 장수 비결이에요. 연애에서 이기려 하지 말고 함께 이기는 방향을 찾아보세요.','이런 사람은 지인의 소개나 오랜 인연 속에서 만나게 될 가능성이 커요. 마음에 드는 신호가 오면 돌려 말하지 말고 한 번은 분명하게 표현해 보세요. 상대에게 맞추기만 하면 지칠 수 있으니 내 취향과 속도도 꼭 말해주세요.','이런 사람은 취미 모임이나 활동적인 자리에서 눈에 띄는 경우가 많아요. 감정이 빨리 달아오르는 만큼 초반 열기에 휩쓸려 결정하지 말고 몇 달 지켜보는 여유가 있으면 좋아요. 서운할 땐 바로 폭발하지 말고 하루 뒤에 차분히 이야기해 보세요.','이런 사람은 조용한 공간이나 공통 관심사가 있는 모임에서 서서히 가까워지는 경우가 많아요. 마음이 깊은 만큼 한 번 상처받으면 오래가니 처음부터 가치관과 연애관을 대화로 확인해 보세요. 속으로만 서운해하지 말고 작게라도 표현하세요.','이런 사람은 직장이나 오래 다닌 모임처럼 꾸준히 마주치는 환경에서 인연이 되기 쉬워요. 마음이 느리게 열리는 편이라 상대가 답답해할 수 있으니 좋아한다는 표현은 말로 해주는 게 좋아요. 변화가 필요할 땐 함께 새로운 경험을 해보세요.','이런 사람은 친구의 친구나 소개팅처럼 신뢰할 수 있는 연결고리를 통해 만나기 좋아요. 상대 눈치를 너무 보며 맞추다 보면 불균형해지니 내가 원하는 것도 분명히 말하는 연습이 필요해요. 챙겨주는 만큼 받는 것도 익숙해지세요.','이런 사람은 일이나 운동처럼 실력과 노력이 드러나는 자리에서 호감이 생기기 쉬워요. 사귄 뒤에는 옳고 그름보다 마음을 먼저 받아주는 대화를 의식하면 오래 가요. 이기려는 싸움 대신 서운함을 먼저 말하는 방식으로 풀어보세요.','이런 사람은 취향이 맞는 전시, 공연, 소규모 모임에서 만나기 좋아요. 기준이 높아 한 번에 마음을 못 정할 수 있으니 완벽한 사람 대신 대화가 편한 사람을 기준으로 삼아 보세요. 서운한 감정은 쌓아두지 말고 그날 안에 짧게라도 전하세요.','이런 사람은 여행, 새로운 모임처럼 낯선 환경에서 자연스럽게 마주치는 경우가 많아요. 자유를 중요하게 여기는 만큼 연락 빈도나 만남 방식을 초반에 서로 합의해 두면 오해가 줄어요. 마음이 흔들릴 땐 혼자 결론 내지 말고 대화로 풀어요.','이런 사람은 조용한 카페나 오래 대화할 수 있는 자리에서 가까워지기 쉬워요. 생각이 많아지는 밤에 연락을 몰아서 하거나 속단하지 말고, 궁금한 건 그때그때 가볍게 물어보세요. 마음을 확인받고 싶을 땐 솔직하게 말하는 게 가장 좋아요.'];
+const MONEY3=['구체적으로는 1인 사업, 프리랜서, 동업, 스포츠·교육 사업, 인테리어·시공처럼 내 손과 이름으로 승부하는 분야가 잘 맞아요. 수입이 커지는 시기는 독립해서 내 브랜드를 세웠을 때이고, 월급만으로는 답답함을 느끼기 쉬워요. 처음에는 퇴사 대신 부업으로 작게 검증한 뒤 독립하는 순서가 가장 안전해요. 돈 관리는 사업 계좌와 생활 계좌를 반드시 분리하세요.','구체적으로는 유튜브·블로그·SNS 같은 콘텐츠, 강사·코치, 디자이너, 작가, 요리·뷰티, 마케팅 기획 쪽이 잘 맞아요. 수입이 커지는 시기는 내 이름이 알려지고 팬이 생길 때이고, 한 번 만든 콘텐츠가 계속 수입이 되는 구조를 만드는 게 핵심이에요. 처음엔 수입이 적어도 꾸준히 올리는 6개월이 중요하니 기록과 포트폴리오를 쌓아 두세요.','구체적으로는 온라인 쇼핑몰, 유통·무역, 영업, 부동산, 주식·펀드 같은 금융, 가게 창업처럼 돈이 오가는 일이 잘 맞아요. 수입이 커지는 시기는 기회를 빨리 잡고 판을 키울 때이지만, 욕심이 앞서면 손실도 같이 커져요. 투자는 생활비와 비상금을 따로 떼어둔 뒤 여유자금으로만 하고, 수익이 나면 일부는 바로 현금화하는 습관을 들이세요.','구체적으로는 대기업, 공기업, 공무원, 법률·회계·세무 같은 전문직, 관리자 직군처럼 조직과 자격이 곧 수입이 되는 일이 잘 맞아요. 수입이 커지는 시기는 직급이 오르고 책임이 커질 때이고, 안정적인 만큼 투자나 부업은 보조 수단으로 두는 게 좋아요. 연봉 협상과 이직 타이밍을 스스로 챙기고 자격증으로 몸값을 올리세요.','구체적으로는 교육·강의, 연구, 출판, 상담, IT·데이터 분석, 자격증 기반 전문직처럼 지식을 파는 일이 잘 맞아요. 수입이 커지는 시기는 전문성이 인정받아 의뢰가 들어오기 시작할 때이고, 공부한 내용을 강의나 전자책으로 만들면 수입 구조가 두 배로 커져요. 공부만 하다 실행이 늦어지지 않도록 작은 결과물부터 세상에 내놓으세요.'];
+const BR=['일지에 자(子)가 있어 생각이 깊고 영리하며 감수성이 풍부해요. 겉으론 조용해도 속으로 많은 걸 계산하고 느끼는 타입이에요.','일지에 축(丑)이 있어 참을성 있고 우직한 속마음을 가졌어요. 느리지만 한번 시작하면 끝까지 가고, 속정이 깊은 사람이에요.','일지에 인(寅)이 있어 속에 야망과 추진력이 가득해요. 새로운 도전을 좋아하고 자유롭게 움직일 때 가장 힘이 나요.','일지에 묘(卯)가 있어 섬세하고 예술적인 감각이 있어요. 사람을 좋아하지만 상처에도 예민해서 마음을 천천히 열어요.','일지에 진(辰)이 있어 속에 큰 포부와 현실 감각을 함께 품고 있어요. 변화가 많은 삶 속에서 반전을 만드는 힘이 있어요.','일지에 사(巳)가 있어 속이 뜨겁고 영리해요. 눈치와 직관이 빠르고 마음 깊은 곳에 강한 열정과 승부욕이 숨어 있어요.','일지에 오(午)가 있어 감정이 솔직하고 열정적이에요. 표현이 빠르고 화끈하며, 좋고 싫음이 얼굴에 그대로 드러나요.','일지에 미(未)가 있어 속이 따뜻하고 고집이 은근히 세요. 챙기는 마음이 크고 예술적 감성이 있지만 쉽게 내색하지 않아요.','일지에 신(申)이 있어 머리 회전이 빠르고 재주가 많아요. 속으로 계산이 빠르고 임기응변이 좋으며 변화에 강해요.','일지에 유(酉)가 있어 속이 깔끔하고 예민해요. 완성도와 기준이 높고, 자기만의 원칙과 미적 감각이 뚜렷해요.','일지에 술(戌)이 있어 의리와 책임감이 강해요. 속으로는 외로움을 타지만 믿는 사람에겐 끝까지 헌신하는 마음을 가졌어요.','일지에 해(亥)가 있어 속이 깊고 자유로워요. 호기심과 상상력이 풍부하고, 마음이 넓어 사람을 품는 힘이 있어요.'];
+const SEN=['태어날 때부터 곧게 뻗으려는 성장 욕구가 강해요. 새로운 일을 시작하고 배우는 걸 좋아하며, 인정과 배려를 중요하게 여겨요. 대신 뜻대로 안 풀리면 답답함을 크게 느껴요.','태어날 때부터 표현 욕구와 열정이 커요. 밝고 솔직하며 사람과 어울릴 때 에너지가 올라가요. 대신 감정 기복과 조급함이 있어서 쉽게 달아오르고 쉽게 식어요.','태어날 때부터 안정과 신뢰를 중요하게 여겨요. 말수는 적어도 묵직하고, 중재하고 포용하는 역할을 자연스럽게 맡아요. 대신 변화를 싫어하고 속을 잘 안 드러내요.','태어날 때부터 원칙과 의리가 뚜렷해요. 옳고 그름을 따지고 결단이 빠르며 한번 정하면 쉽게 안 바꿔요. 대신 말투가 날카롭고 완벽을 요구해 주변이 부담스러울 수 있어요.','태어날 때부터 생각이 깊고 적응력이 좋아요. 흐름을 읽고 지혜롭게 대처하며 자유를 사랑해요. 대신 생각이 많아 걱정이 늘고 속마음을 숨기는 경향이 있어요.'];
+const HU=['살면서 경쟁과 독립을 겪으며 자기 주관이 단단해진 모습이에요. 남에게 기대지 않고 스스로 해결하려는 습관이 생겼고, 자존심이 강해졌어요. 사람을 가려 사귀는 면도 후천적으로 생겼어요.','살면서 표현하고 만들어내는 경험이 쌓여 말과 재주가 늘었어요. 눈치와 센스가 좋아졌고 새로운 걸 시도하는 힘이 커졌어요. 다만 생각을 쏟아내다 스스로 지칠 때도 있어요.','살면서 현실과 돈, 사람 관계를 챙기는 감각이 길러졌어요. 계산이 빠르고 실속을 따지며 기회를 보는 눈이 생겼어요. 대신 손익을 따지다 마음 편한 선택을 놓치기도 해요.','살면서 책임과 규칙, 사회적 시선을 의식하며 자기 절제를 배웠어요. 예의 바르고 신중해졌지만, 스스로를 몰아붙이거나 눈치를 많이 보는 습관이 생겼어요.','살면서 공부와 사색, 보호받은 경험으로 생각이 깊어졌어요. 배려와 이해심이 커졌고 신중하게 판단하지만, 행동으로 옮기기 전 망설이는 습관도 생겼어요.'];
+const LOOK=['이성 눈에는 성실하고 반듯한 사람으로 보여요. 가능성이 보이고 믿음이 가는 인상이라 오래 만나고 싶은 사람으로 기억돼요. 다만 처음엔 조금 어렵거나 진지해 보일 수 있어요.','이성 눈에는 밝고 매력적이며 에너지 넘치는 사람으로 보여요. 첫인상이 강렬하고 분위기를 주도해서 호감을 얻기 쉬워요. 다만 감정이 급하고 변덕스러워 보일 때가 있어요.','이성 눈에는 든든하고 편안한 사람으로 보여요. 화려하진 않아도 같이 있으면 안심이 되는 인상이라 결혼 상대로 좋게 보는 경우가 많아요. 다만 무뚝뚝하거나 재미없어 보일 수 있어요.','이성 눈에는 깔끔하고 세련되며 선이 분명한 사람으로 보여요. 도도하거나 차가워 보여 다가가기 어렵지만, 알고 나면 의리 있고 다정하다는 반전을 느껴요.','이성 눈에는 신비롭고 깊이 있는 사람으로 보여요. 말수가 적어도 분위기가 있고 대화가 통할 것 같은 인상이에요. 다만 속을 알 수 없다고 느끼게 하거나 거리감이 있어 보일 수 있어요.'];
+const LIKE=['책임감 있고 안정적인 사람, 그리고 내 성장을 응원해 주는 사람이 끌려요. 의지할 곳이 필요한 사람이나 조언을 구하는 타입에게 인기가 많고, 연상이나 어른스러운 상대와 잘 맞아요.','밝은 에너지에 끌리는 조용하고 차분한 사람이 많이 호감을 보여요. 내 열정과 표현을 부러워하는 사람이나 분위기를 이끌어주길 바라는 사람에게 인기가 있어요.','마음의 안식처를 찾는 사람, 감정 기복이 있는 사람이 나에게 끌려요. 들어주고 감싸주는 모습에 의지하려는 이성이 많고, 진지하고 오래 만날 사람을 찾는 이성에게 인기가 있어요.','자기 일에 열정적이거나 따뜻하고 부드러운 사람이 나의 단단한 모습에 끌려요. 믿음직하고 결단력 있는 모습을 좋아하는 이성이 많고, 연애에서 확실한 걸 원하는 사람에게 인기가 있어요.','감성적이고 표현이 풍부한 사람이 나의 깊이에 끌려요. 대화가 통하고 이해받고 싶은 이성이 많이 다가오고, 개성 있고 자유로운 사람과도 인연이 잘 닿아요.'];
+const X={밀당:['밀당은 솔직한 쪽이라 약한 편이에요. 좋으면 티가 나고 서운하면 바로 말해서 계산된 거리 두기는 어려워요. 대신 진심이 빨리 전해지는 장점이 있고, 밀당보다 신뢰로 가까워지는 연애가 잘 맞아요.','밀당을 할 줄은 알지만 오래 못 끄는 편이에요. 필요할 땐 한 발 물러서 여유를 보이다가도 마음이 커지면 먼저 다가가요. 상대의 반응을 보며 거리를 조절하는 감각이 적당히 있어요.','밀당 고수예요. 상대의 마음이 어디쯤인지 읽고 다가갈 때와 물러날 때를 정확히 알아요. 다만 너무 계산하다 진짜 마음을 놓치거나 상대가 지칠 수 있으니 중요한 순간엔 솔직함을 섞어주세요.'],돈감각:['돈의 흐름이나 투자 감각은 평범한 편이에요. 한 방을 노리는 판단은 약하지만 대신 무리한 욕심이 적어서 큰 손해를 피해요. 기술이나 꾸준한 수입으로 쌓아가는 게 맞아요.','돈 냄새를 어느 정도 맡는 편이에요. 좋은 기회가 오면 알아보지만 확신이 부족해 놓칠 때가 있어요. 공부하고 정보를 모은 뒤 움직이면 성공 확률이 높아져요.','돈의 흐름과 기회를 보는 눈이 좋아요. 싸게 사서 비싸게 팔거나 사람과 시장의 변화를 읽는 감각이 있고, 수익 구조를 만드는 데 재능이 있어요. 다만 자신감이 지나치면 큰 손실이 날 수 있어요.'],관리:['들어오는 돈보다 나가는 돈이 많아지기 쉬워요. 기분이나 사람 관계에 쓰는 돈이 많아 저축이 어렵고, 충동구매가 잦을 수 있어요. 자동이체와 지출 한도를 정해두면 크게 달라져요.','기본적인 관리는 하지만 가끔 지출이 새는 편이에요. 목표가 생기면 아끼는 힘이 생기고, 가계부나 앱을 쓰면 훨씬 안정돼요. 큰돈 쓸 때만 한 번 더 생각하는 습관이 중요해요.','돈 관리가 꼼꼼하고 절제력이 좋아요. 계획대로 저축하고 지출을 통제하며, 장기적으로 자산을 불리는 힘이 있어요. 다만 너무 아끼다 정작 쓸 때 놓치지 않도록 나에게 쓰는 돈도 챙기세요.'],영업:['영업이나 설득은 부담스러운 편이에요. 밀어붙이는 것보다 진정성과 전문성으로 신뢰를 쌓는 방식이 맞고, 단골을 천천히 만드는 장기 관계형이에요.','필요한 순간엔 설득할 줄 아는 무난한 영업력이에요. 제품이나 일에 확신이 있을 때 말이 잘 나오고, 상대 반응을 보며 조절해요. 연습하면 금방 늘어요.','영업과 설득에 재능이 있어요. 상대의 필요를 빨리 파악하고 호감을 얻어 계약까지 이끄는 힘이 있어요. 말과 분위기를 모두 활용해 사람을 움직이니 고객을 다루는 일에서 빛나요.'],정치:['조직 내 정치나 줄서기에는 약한 편이에요. 실력으로 말하는 쪽이고 계산된 행동이 불편해서 손해를 볼 때가 있어요. 대신 신뢰가 쌓이면 진심으로 인정받는 타입이에요.','필요할 땐 흐름을 읽고 처신하는 정도의 정치력이에요. 누가 중요한 사람인지 알지만 지나치게 나서지는 않아요. 중요한 자리에서만 전략을 쓰면 충분해요.','조직과 관계의 판을 읽는 정치력이 뛰어나요. 누구와 연결돼야 하는지, 언제 나서고 빠질지 알고 있어서 리더 곁이나 중간 관리자 자리에서 특히 강해요. 다만 계산이 티 나지 않게 진정성도 챙기세요.'],친화:['처음 만난 사람과 가까워지는 데 시간이 걸려요. 낯을 가리고 경계가 있지만, 한번 친해지면 깊고 오래 가요. 소수의 사람과 진하게 지내는 편이 잘 맞아요.','사람과 적당히 어울리고 적당히 거리를 두는 균형형이에요. 모임에서 튀지 않으면서도 편안하게 대화를 이어가고 필요할 땐 먼저 다가가요.','누구와도 금방 친해지는 친화력이 있어요. 분위기를 편하게 만들어서 처음 보는 사람도 마음을 열게 하고, 모임에서 사람을 이어주는 역할을 해요. 다만 너무 퍼주다 지치지 않게 선을 정해 두세요.']};
+const EL_MANY=['사주에 목(木)의 기운이 가장 많아서 성장 욕구와 추진력, 배우려는 의욕이 두드러져요. 새로운 일을 벌이는 걸 좋아하고 자존심과 자기 주장이 뚜렷한 편이에요.','사주에 화(火)의 기운이 가장 많아서 열정과 표현력이 두드러져요. 분위기를 띄우고 감정을 솔직하게 드러내며, 에너지가 크지만 쉽게 지치기도 해요.','사주에 토(土)의 기운이 가장 많아서 안정감과 신중함이 두드러져요. 포용력이 크고 믿음직하지만 고집이 세고 변화에 느려서 기회를 놓치기도 해요.','사주에 금(金)의 기운이 가장 많아서 결단력과 원칙, 의리가 두드러져요. 맺고 끊음이 분명하고 승부욕이 있지만 말이 날카로워 오해를 사기 쉬워요.','사주에 수(水)의 기운이 가장 많아서 지혜와 직관, 적응력이 두드러져요. 생각이 깊고 유연하지만 걱정과 생각이 많아 실행이 느려질 수 있어요.'];
+const EL_LACK=['반면 목(木)의 기운이 없어서 새로운 시도와 유연함을 의식적으로 채우면 좋아요. 산책, 식물, 배움 같은 활동이 균형을 잡아줘요.','반면 화(火)의 기운이 없어서 표현과 열정을 의식적으로 채우면 좋아요. 사람 만나기, 햇볕 쬐기, 운동이 균형을 잡아줘요.','반면 토(土)의 기운이 없어서 중심과 안정감을 의식적으로 채우면 좋아요. 규칙적인 생활과 저축 습관이 균형을 잡아줘요.','반면 금(金)의 기운이 없어서 결단력과 마무리를 의식적으로 채우면 좋아요. 정리정돈과 기한 정하기가 균형을 잡아줘요.','반면 수(水)의 기운이 없어서 휴식과 유연함을 의식적으로 채우면 좋아요. 충분한 수면, 명상, 독서가 균형을 잡아줘요.'];
+const LOOKT=['첫인상을 더 좋게 하려면 웃는 표정과 가벼운 농담을 섞어 보세요. 너무 진지하지 않게 힘을 빼면 호감이 확 올라가요.','첫인상은 이미 강하니 상대 이야기를 먼저 들어주는 여유를 보여주면 더 좋아요. 말 속도를 한 박자 늦추면 신뢰감이 커져요.','표정과 리액션을 조금 크게 해주면 훨씬 매력적으로 보여요. 먼저 질문을 던지고 관심을 표현하면 무뚝뚝한 인상이 풀려요.','차가운 인상을 풀려면 미소와 부드러운 말투를 의식해 보세요. 사소한 칭찬 한마디가 도도해 보이는 거리를 확 줄여줘요.','신비로운 분위기는 장점이지만, 속마음을 조금씩 보여줘야 상대가 다가올 수 있어요. 일상 이야기를 한 가지씩 공유해 보세요.'];
+const LIKET=['이런 사람이 다가오면 서두르지 말고 대화를 오래 해보세요. 진짜 마음은 시간이 지나야 보이고, 처음 느낌보다 꾸준함을 기준으로 삼는 게 좋아요.','호감을 보이는 사람이 많은 만큼 누가 진심인지 가려내는 눈이 필요해요. 말보다 행동이 일관된 사람을 선택하세요.','의지하려는 사람이 많아 내가 지치기 쉬워요. 받는 만큼 주는 균형이 맞는 사람인지 확인하고, 내 감정도 돌보세요.','다가오는 사람에게 너무 높은 기준을 들이대면 인연을 놓칠 수 있어요. 완벽함보다 서로 맞춰갈 마음이 있는지를 보세요.','끌리는 사람이 많아도 속도를 천천히 가져가는 게 좋아요. 감정에 휩쓸리기보다 대화로 서로의 가치관을 확인해 보세요.'];
+const TX3={돈감각:['기회를 알아보는 감을 키우려면 투자 공부나 경제 뉴스를 꾸준히 접하는 게 도움이 돼요. 작은 금액으로 경험을 쌓으면서 감각을 키워 보세요.','감각이 좋은 만큼 확신이 과해지지 않게 손절 기준과 투자 한도를 미리 정해두세요. 수익이 날 때 일부를 현금화하는 습관이 큰 자산이 돼요.'],관리:['자동이체로 저축부터 빼두고 남은 돈으로 생활하는 방식이 잘 맞아요. 한 달에 한 번 지출 내역을 훑어보는 것만으로도 새는 돈이 크게 줄어요.','관리 능력이 좋으니 모은 돈을 굴리는 단계로 넘어가 보세요. 예금만 고집하지 말고 분산투자와 장기 계획을 세우면 자산이 더 빨리 늘어요.'],영업:['영업이 어렵다면 상대 이야기를 충분히 듣고 도움이 되는 정보를 주는 방식으로 접근해 보세요. 팔려는 마음보다 돕는 마음이 설득력을 높여요.','영업력이 좋으니 이 재능을 구체적인 성과로 연결해 보세요. 고객 관리 기록을 꾸준히 남기고 단골을 만들면 수입이 안정적으로 늘어요.'],정치:['정치가 어렵다면 핵심 인물 한두 명과 신뢰를 쌓는 것부터 시작하세요. 성과를 적절히 알리는 습관만 들여도 평가가 달라져요.','정치력이 강한 만큼 진정성을 잃지 않는 게 중요해요. 편을 가르기보다 중립적인 조율자 이미지를 만들면 장기적으로 더 큰 힘이 돼요.'],친화:['친해지기가 어렵다면 작은 질문 하나로 대화를 열어보세요. 상대 이름을 기억하고 안부를 묻는 것만으로 거리감이 빨리 줄어요.','친화력이 높은 만큼 모든 사람에게 에너지를 쓰다 지칠 수 있어요. 혼자 쉬는 시간을 일정에 넣고 진짜 중요한 관계에 더 집중하세요.']};
+TX3.밀당=['밀당이 서툴다면 억지로 계산하기보다 답장 속도를 조금만 여유 있게 가져가 보세요. 솔직한 마음은 그대로 두고, 서운한 감정만 하루 뒤에 정리해서 전하면 훨씬 좋아요.','밀당 감각이 좋은 만큼 진짜 마음이 갈 때는 숨기지 말고 표현해 주세요. 계산만 하다 보면 상대가 지쳐 떠날 수 있으니, 중요한 순간엔 솔직함이 최고의 밀당이에요.'];
+const MONEY2=["남에게 휘둘리지 않는 독립형이라 월급보다 사업이나 프리랜서가 잘 맞아요. 다만 동업은 역할과 지분을 문서로 정하고, 보증이나 감정적인 금전 거래는 피하는 게 좋아요.","재능이 돈이 되는 유형이에요. 콘텐츠, 강의, 상담, 디자인처럼 나를 브랜드로 만드는 일이 좋고, 꾸준히 올리는 습관이 수입으로 이어져요. 수입이 들쭉날쭉하기 쉬우니 고정 수입원도 하나 두세요.","돈 냄새를 잘 맡는 유형이라 사고파는 일과 투자에 감각이 있어요. 다만 욕심이 커질 때 손실도 커지니 투자는 여유자금 안에서, 손절 기준을 정해두고 하세요.","조직에서 신뢰를 쌓아 올라가는 유형이에요. 직급과 연차가 곧 수입이라 한 곳에서 오래 쌓는 게 유리해요. 부업보다 자격증과 경력 관리가 효과가 커요.","지식과 자격이 돈이 되는 유형이에요. 공부하고 전문성을 쌓을수록 몸값이 올라가고, 지식을 콘텐츠나 강의로 확장하면 수입 구조가 커져요. 작은 것부터 바로 시작해 보세요."];
+const MONEY=[
+["독립·창업형","혼자 또는 동료와 함께 내 이름으로 하는 일이 잘 맞아요. 동업, 1인 사업, 프리랜서, 스포츠·교육 분야를 눈여겨보세요."],
+["표현·콘텐츠형","말, 글, 영상, 아이디어가 곧 돈이 돼요. 강의, 콘텐츠 제작, 마케팅, 디자인, 방송, 상담 쪽을 추천해요."],
+["장사·투자형","돈이 오가는 곳에서 감각이 좋아요. 영업, 유통, 쇼핑몰, 부동산, 금융·투자 분야에서 힘을 발휘해요."],
+["직장·전문직형","조직 안에서 인정받아 올라가는 구조예요. 대기업, 공무원, 법률·행정, 관리직처럼 안정적 커리어가 좋아요."],
+["지식·자격형","머리로 버는 타입이에요. 자격증, 연구, 교육, 기획, 출판, IT·분석 직군에서 오래 가요."]];
+function l2s(Y,M,D,leap){
+ try{const f=new Intl.DateTimeFormat("en-US-u-ca-dangi",{timeZone:"Asia/Seoul",year:"numeric",month:"numeric",day:"numeric"});
+ for(let i=0;i<430;i++){const t=new Date(Date.UTC(Y,0,1,3)+i*864e5),p={};
+  f.formatToParts(t).forEach(x=>p[x.type]=x.value);
+  const mo=String(p.month);
+  if(+p.relatedYear==Y&&parseInt(mo)==M&&/\D/.test(mo)==leap&&+p.day==D)return[t.getUTCFullYear(),t.getUTCMonth()+1,t.getUTCDate()]}
+ }catch(e){}
+ return null}
+const SITE_URL='https://saju-site-ecru.vercel.app';
+const KAKAO_KEY='';
+const KAKAO_SDK='https://t1.kakaocdn.net/kakao_js_sdk/2.8.2/kakao.min.js';
+let LAST=null;
+const BASE=/^https?:$/.test(location.protocol)?location.origin+'/':SITE_URL+'/';
+function mkSum(P,me,mbti,sc,s2){const av=a=>Math.round(a.reduce((x,y)=>x+y,0)/a.length);return{d:S[me]+B[P[2].b],m:mbti,a:[s2.밀당,av([s2.돈감각,s2.관리]),av([s2.영업,sc.처세술,sc.눈치,s2.정치,s2.친화]),sc.정신력],p:[3,2,1,0].map(i=>P[i]?[P[i].s,P[i].b]:null)}}
+function shareUrl(s){return BASE+'api/share?r='+encodeURIComponent([s.d,s.m].concat(s.a).join('.'))}
+function shareText(s){return '내 사주는 '+s.d+'일주, '+s.m+'! 연애 '+s.a[0]+' · 재물 '+s.a[1]+' · 직업 '+s.a[2]+' · 정신력 '+s.a[3]+' — 너도 해봐! '+shareUrl(s)}
+function msg(t){const e=document.getElementById('shmsg');if(e)e.textContent=t}
+function shareHTML(){return `<h2 id='sh'>친구에게 공유하기</h2><div class='card'><p>내 결과를 보내고 너도 해봐! 해보세요. 생년월일은 링크에 들어가지 않고, 일주 · MBTI · 점수 요약만 담겨요.</p><div class='shr'><button type='button' class='kk' id='b-kk'>카카오톡 공유</button><button type='button' class='sb' id='b-nt'>다른 앱으로 공유</button><button type='button' class='sb' id='b-cp'>링크 복사</button><button type='button' class='sb' id='b-im'>결과 카드 이미지 저장</button></div><p id='shmsg' style='margin-top:12px;font-size:14px'></p></div>`}
+function bindShare(){const $=i=>document.getElementById(i);$('b-kk').onclick=kakaoShare;$('b-cp').onclick=copyLink;$('b-nt').onclick=nativeShare;$('b-im').onclick=saveCard;if(!navigator.share)$('b-nt').style.display='none';if(!KAKAO_KEY)$('b-kk').style.display='none'}
+async function copyLink(){const u=shareUrl(LAST);try{await navigator.clipboard.writeText(u);msg('링크를 복사했어요! 카톡이나 인스타에 붙여넣어 보세요.')}catch(e){msg('복사가 안 돼요. 직접 복사해 주세요: '+u)}}
+async function nativeShare(){try{await navigator.share({title:"MZu's 도파민 사주",text:shareText(LAST)})}catch(e){}}
+function kakaoShare(){const s=LAST,u=shareUrl(s);if(!KAKAO_KEY||!window.Kakao){msg('카카오톡 공유를 아직 쓸 수 없어요. 다른 앱으로 공유나 링크 복사를 이용해 주세요.');return}try{if(!Kakao.isInitialized())Kakao.init(KAKAO_KEY);Kakao.Share.sendDefault({objectType:'feed',content:{title:'내 사주는 '+s.d+'일주, '+s.m+'!',description:'연애 '+s.a[0]+' · 재물 '+s.a[1]+' · 직업 '+s.a[2]+' · 정신력 '+s.a[3]+'\n너도 해봐!',imageUrl:SITE_URL+'/og.png',link:{mobileWebUrl:u,webUrl:u}},buttons:[{title:'나도 해보기',link:{mobileWebUrl:u,webUrl:u}}]})}catch(e){msg('카카오톡 공유를 열지 못했어요. 잠시 후 다시 해 주세요.')}}
+async function saveCard(){const s=LAST;msg('결과 카드를 만드는 중...');try{await Promise.all([document.fonts.load('60px Jua'),document.fonts.load('30px Gowun Dodum')])}catch(e){}
+ const W=1080,H=1350,c=document.createElement('canvas');c.width=W;c.height=H;const x=c.getContext('2d');
+ const g=x.createLinearGradient(0,0,W,H);g.addColorStop(0,'#dcecff');g.addColorStop(.5,'#ffeaf2');g.addColorStop(1,'#e9e2fb');x.fillStyle=g;x.fillRect(0,0,W,H);
+ const rr=(a,b,w,h,r,f)=>{x.beginPath();if(x.roundRect)x.roundRect(a,b,w,h,r);else x.rect(a,b,w,h);x.fillStyle=f;x.fill()};
+ const F=(px,fam)=>px+'px '+(fam||'Jua')+', Gowun Dodum, sans-serif';
+ x.textAlign='center';x.textBaseline='middle';x.fillStyle='#0f1424';x.font=F(64);x.fillText("MZu's 도파민 사주",W/2,120);x.font=F(110);x.fillText(s.d+'일주',W/2,270);x.font=F(70);x.fillStyle='#6f8fe8';x.fillText(s.m,W/2,380);
+ const lab=['시','일','월','년'],col=[['#8fd9a0','#10361a'],['#ff8f88','#5a1410'],['#ffe27a','#4d3b00'],['#ffffff','#2b2f3a'],['#2f3340','#ffffff']];
+ s.p.forEach((q,i)=>{const bx=90+i*240;x.fillStyle='#3f4863';x.font=F(34);x.fillText(lab[i],bx+105,470);[0,1].forEach(k=>{const by=500+k*190;let f,h1='?',h2='모름';if(q){const e=k?BE[q[1]]:SE[q[0]];f=col[e];h1=k?BH[q[1]]:SH[q[0]];h2=(k?B[q[1]]:S[q[0]])+' · '+EN[e]}else f=['#ece6f8','#3f4863'];rr(bx,by,210,170,28,f[0]);x.fillStyle=f[1];x.font=F(78,'serif');x.fillText(h1,bx+105,by+75);x.font=F(30);x.fillText(h2,bx+105,by+135)})});
+ const nm=['연애 · 밀당','재물','직업','정신력'];
+ s.a.forEach((v,i)=>{const y=930+i*80;x.textAlign='left';x.fillStyle='#0f1424';x.font=F(36);x.fillText(nm[i],90,y);rr(330,y-14,520,28,14,'#ffffffaa');const gg=x.createLinearGradient(330,0,850,0);gg.addColorStop(0,'#ffb3cf');gg.addColorStop(.5,'#cbb7f4');gg.addColorStop(1,'#9ccaf7');rr(330,y-14,520*v/100,28,14,gg);x.textAlign='right';x.fillStyle='#0f1424';x.fillText(String(v),990,y)});
+ x.textAlign='center';x.fillStyle='#3f4863';x.font=F(34);x.fillText('너도 해봐! '+BASE.replace(/^https?:\/\//,'').replace(/\/$/,''),W/2,1270);
+ c.toBlob(async b=>{if(!b){msg('이미지를 만들지 못했어요.');return}const f=new File([b],'saju-result.png',{type:'image/png'});try{if(navigator.canShare&&navigator.canShare({files:[f]})){await navigator.share({files:[f],title:"MZu's 도파민 사주",text:shareText(s)});msg('');return}}catch(e){if(e&&e.name==='AbortError'){msg('');return}}const a=document.createElement('a');a.href=URL.createObjectURL(b);a.download='saju-result.png';document.body.appendChild(a);a.click();a.remove();msg('결과 카드 이미지를 저장했어요. 인스타 스토리에 올려 보세요!')},'image/png')}
+function initShare(){const m=/^([갑을병정무기경신임계][자축인묘진사오미신유술해])\.([EI][NS][TF][JP])\.(\d{2})\.(\d{2})\.(\d{2})\.(\d{2})$/.exec(new URLSearchParams(location.search).get('r')||'');if(m){document.getElementById('shared').innerHTML=`<div class='card'><p class='hero'>친구가 먼저 해봤어요</p><p>${m[1]}일주 · ${m[2]}<br>연애 ${m[3]} · 재물 ${m[4]} · 직업 ${m[5]} · 정신력 ${m[6]}<br>너는 어떻게 나올까? 아래에 생년월일을 넣어봐!</p></div>`}if(KAKAO_KEY){const sc=document.createElement('script');sc.src=KAKAO_SDK;sc.crossOrigin='anonymous';document.head.appendChild(sc)}}
+initShare();
+const GC_CODE='';const START_TOTAL=0;
+function initCounter(){
+ if(!GC_CODE||!/^[a-z0-9-]+$/.test(GC_CODE))return;
+ try{
+  const s=document.createElement('script');s.async=true;s.src='https://gc.zgo.at/count.js';s.setAttribute('data-goatcounter','https://'+GC_CODE+'.goatcounter.com/count');document.head.appendChild(s);
+  const base='https://'+GC_CODE+'.goatcounter.com/counter/TOTAL.json';
+  const kst=new Date(Date.now()+9*3600*1000).toISOString().slice(0,10);
+  const num=j=>parseInt(String(j&&(j.count_unique!=null?j.count_unique:j.count)).replace(/[^0-9]/g,''),10)||0;
+  const get=u=>fetch(u).then(r=>{if(!r.ok)throw 0;return r.json()});
+  setTimeout(()=>{
+   Promise.all([get(base+'?start='+kst+'&end='+kst),get(base)]).then(([t,a])=>{
+    const f=n=>n.toLocaleString('ko-KR');
+    document.getElementById('vt').textContent=f(num(t));
+    document.getElementById('va').textContent=f(START_TOTAL+num(a));
+    document.getElementById('vc').style.display='block';
+   }).catch(()=>{});
+  },1800);
+ }catch(e){}
+}
+initCounter();
+function run(){
+ const $=i=>document.getElementById(i),err=$("err");let y=+$("yy").value,m=+$("mm").value,d=+$("dd").value;const isL=document.querySelector("input[name=c]:checked").value=="l";
+ if(!(Number.isInteger(y)&&Number.isInteger(m)&&Number.isInteger(d)&&y>=1900&&y<=2100&&m>=1&&m<=12&&d>=1&&d<=(isL?30:new Date(y,m,0).getDate()))){err.textContent="생년월일을 정확히 입력해 주세요.";return}
+ err.textContent="";
+ let note="";if(isL){const lk=$("lm").checked,r=l2s(y,m,d,lk);if(!r){err.textContent="해당 음력 날짜를 찾을 수 없어요. 월·일·윤달 여부를 확인해 주세요.";return}note=`음력 ${y}.${m}.${d}${lk?" (윤달)":""} → 양력 ${r[0]}년 ${r[1]}월 ${r[2]}일로 계산했어요`;[y,m,d]=r}
+ const hv=$("hh").value,mv=$("mn").value;
+ const nt=$("nt").checked;
+ const h=nt||hv===""?null:+hv,mi=nt||h===null?0:+(mv||0);if(h!==null&&!(Number.isInteger(h)&&Number.isInteger(mi)&&h>=0&&h<=23&&mi>=0&&mi<=59)){err.textContent="시는 0~23, 분은 0~59로 입력해 주세요.";return}
+ const g=document.querySelector("input[name=g]:checked").value;
+ const P=calc(y,m,d,h,mi),me=P[2].s,mel=SE[me];
+ const el=[0,0,0,0,0],c=[0,0,0,0,0];
+ P.forEach((p,i)=>{el[SE[p.s]]++;el[BE[p.b]]++;
+  if(i!=2)c[rel(mel,SE[p.s])]++;c[rel(mel,BE[p.b])]++});
+ const [bi,sk,jae,gw,inn]=c;
+ const cl=x=>Math.round(58+(Math.max(40,Math.min(95,x))-40)*37/55);
+ const sc={
+  정신력:cl(42+bi*9+inn*8+gw*4),
+  눈치:cl(42+sk*9+gw*7+jae*3),
+  연애능력:cl(42+(g=="m"?jae:gw)*11+sk*5+(g=="m"?gw:jae)*2),
+  처세술:cl(42+gw*8+jae*5+bi*3),
+  판단력:cl(42+inn*10+gw*6),
+  말빨:cl(42+sk*13+bi*3),
+  글빨:cl(42+inn*8+sk*9),
+  돈버는능력:cl(42+jae*12+sk*5)
+ };
+ const E=bi+sk>=inn+gw?"E":"I";
+ const N=inn+sk>=jae+gw?"N":"S";
+ const Tt=gw+jae>=inn+sk?"T":"F";
+ const J=gw+inn>=sk+bi?"J":"P";
+ const mbti=E+N+Tt+J;
+ const ax=[Math.abs(bi+sk-inn-gw),Math.abs(inn+sk-jae-gw),Math.abs(gw+jae-inn-sk),Math.abs(gw+inn-sk-bi)];
+ const fi=ax.indexOf(Math.min(...ax)),fl={E:"I",I:"E",N:"S",S:"N",T:"F",F:"T",J:"P",P:"J"};
+ const aa=[E,N,Tt,J];aa[fi]=fl[aa[fi]];const mb2=aa.join("");
+ const names=["비겁","식상","재성","관성","인성"];
+ let top=0;c.forEach((x,i)=>{if(x>c[top])top=i});
+ let sec=-1;c.forEach((x,i)=>{if(i!=top&&(sec<0||x>c[sec]))sec=i});
+ const weak=el.map((x,i)=>[x,i]).filter(a=>a[0]==0).map(a=>EN[a[1]]);
+ const mx=Math.max(...el,1);
+ const lab=["연주","월주","일주","시주"];
+ let H=(note?`<p class="lead" style="margin:0 0 14px;font-size:13px">${note}</p>`:"")+`<h2>사주 팔자</h2><div class="pillars">`;
+ const ECOL=["m","f","t","g","w"];const box=(h,k,e)=>`<div class="bx ${ECOL[e]}"><b>${h}</b><i>${k}</i><u>${EN[e]}</u></div>`;const xb=`<div class="bx x"><b>?</b><i>모름</i><u>&nbsp;</u></div>`;
+ [3,2,1,0].forEach(i=>{const p=P[i];H+=p?`<div class="p ${i==2?"me":""}"><small>${lab[i]}</small>${box(SH[p.s],S[p.s],SE[p.s])}${box(BH[p.b],B[p.b],BE[p.b])}</div>`:`<div class="p"><small>${lab[i]}</small>${xb}${xb}</div>`});
+ 
+ H+=`</div>`;
+ H+=`<h2>나는 어떤 사람?</h2><div class="card"><p class="hero">${S[me]}${B[P[2].b]}일주 (${SH[me]}${BH[P[2].b]}) · ${EN[mel]} 일간</p><p>${DM[me]}</p><p style="margin-top:10px">${CH.성격[me]}</p></div>`;
+ H+=`<h2>오행 분포</h2><div class="card">`;
+ el.forEach((x,i)=>{H+=`<div class="el"><span>${EN[i]}</span><div class="tr"><div style="width:${x/mx*100}%"></div></div><span>${x}</span></div>`});
+ H+=weak.length?`<p style="margin-top:12px">부족한 기운: ${weak.join(", ")}</p>`:`<p style="margin-top:12px">다섯 기운이 고르게 있는 편이에요.</p>`;
+ H+=`</div><h2>나의 매력 · 강점 · 약점</h2><div class="card">`+["매력","강점","약점"].map(k=>`<div class="t"><div class="th"><b>${k}</b></div><p>${CH[k][me]}</p><p>${EXT[k][mel]}</p></div>`).join("")+`</div><h2>세부 분석</h2><div class="card">`;
+ for(const k in sc){H+=`<div class="t"><div class="th"><b>${k=="눈치"?"눈치력":k.replace("버는능력"," 버는 능력")}</b><em>${sc[k]}</em></div><div class="tr"><div style="width:${sc[k]}%"></div></div><p>${T3(TX2[k],sc[k])}</p><p>${TIP[k][sc[k]<60?0:1]}</p></div>`}
+ H+=`</div><h2>나와 어울리는 이성</h2><div class="card"><p>${CH.이성[me]}</p><p style="margin-top:10px">${CH.이성2[me]}</p><p style="margin-top:10px">${CH.이성3[me]}</p></div><h2>MBTI 유추</h2><div class="card"><p class="mbti">${mbti}<span style="font-size:16px;letter-spacing:0;color:var(--sub)"> 1순위 · ${MB[mbti][0]}</span></p><p>${MB[mbti][1]}</p><p class="mbti" style="margin-top:20px">${mb2}<span style="font-size:16px;letter-spacing:0;color:var(--sub)"> 2순위 · ${MB[mb2][0]}</span></p><p>${MB[mb2][1]} ${["E/I","N/S","T/F","J/P"][fi]} 성향이 가장 애매해서 이 조합도 후보로 같이 봤어요.</p><p style="margin-top:14px">1순위 기준으로 보면 ${E=="E"?"밖으로 에너지를 쓰는":"안에서 에너지를 모으는"} ${N=="N"?"아이디어형":"현실 감각형"}, ${Tt=="T"?"논리로 판단하고":"공감으로 판단하고"} ${J=="J"?"계획대로 움직이는":"흐름에 맞춰 움직이는"} 타입으로 보여요. 오락용 추정이니 실제 MBTI와 달라도 괜찮아요.</p></div>`;
+ H+=`<h2>돈 버는 방향</h2><div class="card"><p class="hero">${MONEY[top==0?0:top][0]}</p><p>${MONEY[top][1]}</p><p style="margin-top:10px">${MONEY2[top]}</p><p style="margin-top:10px">${MONEY3[top]}</p>`;
+ if(sec>=0&&c[sec]>0)H+=`<p style="margin-top:10px">보조 강점은 <b style="color:var(--ink)">${MONEY[sec][0]}</b>이에요. 메인 일에 이 요소를 섞으면 수입이 더 안정돼요.</p>`;
+ H+=`</div><button class="re" onclick="window.scrollTo({top:0,behavior:'smooth'})">다시 입력하기</button>`;
+ const o=document.getElementById("out");const s2={밀당:cl(42+sk*9+jae*5+gw*5-bi*2),돈감각:cl(42+jae*11+sk*6+inn*2),관리:cl(48+inn*8+gw*8-sk*4-bi*3),영업:cl(42+sk*10+jae*7+bi*3),정치:cl(42+gw*9+inn*6+jae*4),친화:cl(42+bi*8+sk*6+inn*3)};
+ const it=(t,b,s)=>`<div class="t"><div class="th"><b>${t}</b>${s==null?"":`<em>${s}</em>`}</div>${s==null?"":`<div class="tr"><div style="width:${s}%"></div></div>`}${[].concat(b).map(x=>`<p>${x}</p>`).join("")}</div>`;
+ const cat=(t,a)=>`<h2>${t}</h2><div class="card">${a.join("")}</div>`;
+ const nw=(k,n)=>it(n,[T3(X[k],s2[k]),TX3[k][s2[k]<74?0:1]],s2[k]);
+ const ol=(k,n)=>it(n,[T3(TX2[k],sc[k]),TIP[k][sc[k]<74?0:1]],sc[k]);
+ const ch={};H.split("<h2>").forEach((s,i)=>{if(i)ch[s.split("</h2>")[0]]="<h2>"+s;else ch._=s});
+ const who=`<h2>나는 어떤 사람?</h2><div class="card"><p class="hero">${S[me]}${B[P[2].b]}일주 (${SH[me]}${BH[P[2].b]}) · ${EN[mel]} 일간</p><p>${DM[me]}</p><p style="margin-top:10px">${CH.성격[me]}</p><p style="margin-top:10px">${BR[P[2].b]}</p><p style="margin-top:10px">${EL_MANY[el.indexOf(Math.max(...el))]} ${el.every(x=>x>0)?'다섯 기운이 모두 있어 한쪽으로 치우치지 않고 상황에 따라 다양한 모습을 보여줄 수 있어요.':el.map((x,i)=>x?'':EL_LACK[i]).join(' ')}</p></div>`;
+ const c1=cat("타고난 성격",[it("선천적 성격",SEN[mel]),it("후천적 성격",HU[top]),it("나의 강점",[CH.강점[me],EXT.강점[mel]]),it("나의 약점",[CH.약점[me],EXT.약점[mel]]),ol("정신력","정신력"),ol("판단력","판단력")]);
+ const c2=cat("연애",[nw("밀당","나의 밀당 능력"),it("이성들이 보는 나",[LOOK[mel],LOOKT[mel]]),it("나의 매력",[CH.매력[me],EXT.매력[mel]]),it("나랑 어울리는 이성",[CH.이성[me],CH.이성2[me],CH.이성3[me]]),it("어떤 이성들이 날 좋아할까",[LIKE[mel],LIKET[mel]])]);
+ const c3=cat("재물",[nw("돈감각","돈을 보는 감각"),it("부자될 수 있는 분야",[`<b style="color:var(--acc)">${MONEY[top][0]}</b> · ${MONEY[top][1]}`,MONEY2[top],MONEY3[top]].concat(sec>=0&&c[sec]>0?[`보조 강점은 ${MONEY[sec][0]}이에요. 메인 일에 이 요소를 섞으면 수입이 더 안정돼요.`]:[])),nw("관리","돈 관리 능력")]);
+ LAST=mkSum(P,me,mbti,sc,s2);
+ const c4=cat("직업",[nw("영업","영업력"),ol("처세술","처세술"),ol("눈치","눈치력"),nw("정치","정치력"),nw("친화","친화력"),ol("말빨","말빨"),ol("글빨","글빨")]);
+ const TABS=[["sum","요약",(ch._||"")+ch["사주 팔자"]+who+ch["오행 분포"]],["per","성격",c1],["lov","연애",c2],["mon","재물",c3],["job","직업",c4],["mbt","MBTI",ch["MBTI 유추"]],["shr","공유",shareHTML()+`<button class="re" onclick="window.scrollTo({top:0,behavior:'smooth'});document.getElementById('f').scrollIntoView({behavior:'smooth'})">다시 입력하기</button>`]];
+ o.innerHTML=`<button class="gs" type="button" onclick="showTab('shr')">📤 친구에게 공유하기</button><div class="tabs" id="tabs" role="tablist">`+TABS.map((t,n)=>`<button type="button" role="tab" class="tb${n?"":" on"}" data-t="${t[0]}" onclick="showTab('${t[0]}')">${t[1]}</button>`).join("")+`</div>`+TABS.map((t,n)=>`<section class="pane${n?"":" on"}" id="pn-${t[0]}">${t[2]}</section>`).join("");o.style.display="block";bindShare();
+ o.scrollIntoView({behavior:"smooth"});
+}
+function showTab(k){document.querySelectorAll(".pane").forEach(p=>p.classList.toggle("on",p.id=="pn-"+k));var bs=document.querySelectorAll(".tb");bs.forEach(b=>{var on=b.dataset.t==k;b.classList.toggle("on",on);b.setAttribute("aria-selected",on);if(on&&b.scrollIntoView)try{b.scrollIntoView({inline:"center",block:"nearest",behavior:"smooth"})}catch(e){}});var t=document.getElementById("tabs");if(t){var y=t.getBoundingClientRect().top+window.pageYOffset-4;window.scrollTo({top:y,behavior:"smooth"})}}
+document.getElementById("go").addEventListener("click",run);
+document.querySelectorAll("input[name=c]").forEach(r=>r.addEventListener("change",()=>{document.getElementById("lp").style.display=document.querySelector("input[name=c]:checked").value=="l"?"flex":"none"}));
+document.getElementById("nt").addEventListener("change",e=>{document.getElementById("hh").disabled=document.getElementById("mn").disabled=e.target.checked});
+</script>
+<script>(function(){var n=document.getElementById('nt'),t=document.getElementById('tm');if(n&&t)n.addEventListener('change',function(){t.classList.toggle('off',n.checked)})})()</script>
+<script>(function(){var o=document.getElementById('out');if(!o)return;function fmt(){var ps=o.querySelectorAll('.card p:not([data-f]):not(.hero):not(.note)');ps.forEach(function(p){p.setAttribute('data-f','1');if(p.querySelector('.shr')||p.textContent.length<110)return;var h=p.innerHTML.replace(/([.!?])\s+/g,function(m,a){return a+'\u0001'}).split('\u0001');if(h.length<3)return;var g=[],cur='',n=0;h.forEach(function(x){cur+=(cur?' ':'')+x;n++;if(n>=2&&cur.length>=70){g.push(cur);cur='';n=0}});if(cur){if(g.length&&cur.length<40)g[g.length-1]+=' '+cur;else g.push(cur)}if(g.length<2)return;var f=document.createDocumentFragment();g.forEach(function(t){var q=document.createElement('p');q.setAttribute('data-f','1');q.innerHTML=t;f.appendChild(q)});p.parentNode.replaceChild(f,p)})}new MutationObserver(fmt).observe(o,{childList:true,subtree:true});})()</script>
+<script>(function(){
+var $=function(i){return document.getElementById(i)},ADM='';window.getAdm=function(){return ADM};try{ADM=sessionStorage.getItem('mzuadm')||''}catch(e){}
+function view(v){document.body.classList.toggle('vb',v=='board');document.body.classList.toggle('vc',v=='chat');if(window.chatView)window.chatView(v=='chat');document.querySelectorAll('.nb').forEach(function(b){b.classList.toggle('on',b.dataset.v==v)});if(v=='board')load();window.scrollTo({top:0,behavior:'smooth'})}
+document.querySelectorAll('.nb').forEach(function(b){b.addEventListener('click',function(){view(b.dataset.v)})});
+function api(b){if(ADM)b.admin=ADM;return fetch('/api/board',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.json().then(function(j){j._s=r.status;return j})})}
+function el(t,c,x){var e=document.createElement(t);if(c)e.className=c;if(x!=null)e.textContent=x;return e}
+function fd(t){var d=new Date(t);return (d.getMonth()+1)+'.'+d.getDate()+' '+('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}
+function btn(t,c,f){var b=el('button','bb'+(c?' '+c:''),t);b.type='button';b.onclick=f;return b}
+function makePost(p){var d=el('div','bp');var h=el('div','bh');var l=el('span');l.appendChild(el('span','tag',p.cat=='req'?'건의':'질문'));if(p.priv)l.appendChild(el('span','tag','🔒'));l.appendChild(el('b','',p.nick));h.appendChild(l);h.appendChild(el('span','',fd(p.ts)));d.appendChild(h);
+var body=el('p','bx2',p.locked?'🔒 비공개 글이에요. 작성자만 볼 수 있어요.':p.text);d.appendChild(body);
+if(p.answer&&p.answer!='__has__'){var a=el('div','ans');a.appendChild(el('small','','MZu의 답변'));a.appendChild(el('div','bx2',p.answer));d.appendChild(a)}else if(p.answer=='__has__'){d.appendChild(el('div','ans',null)).textContent='✅ MZu가 답변했어요 (비밀번호로 열어보세요)'}else{var w=el('small','','답변 대기중');w.style.color='var(--sub)';d.appendChild(w)}
+var act=el('div');
+if(p.locked)act.appendChild(btn('내 글 열기','pr',function(){var pw=prompt('글 쓸 때 정한 비밀번호를 입력하세요');if(!pw)return;api({a:'open',id:p.id,pw:pw}).then(function(j){if(j.post){var q=j.post;body.textContent=q.text;var o=d.querySelector('.ans');if(o)o.remove();if(q.answer){var a=el('div','ans');a.appendChild(el('small','','MZu의 답변'));a.appendChild(el('div','bx2',q.answer));d.insertBefore(a,act)}}else alert('비밀번호가 맞지 않아요')})}));
+act.appendChild(btn('삭제','',function(){var pw=ADM?'':prompt('비밀번호를 입력하세요');if(!ADM&&!pw)return;if(!confirm('삭제할까요?'))return;api({a:'del',id:p.id,pw:pw}).then(function(j){if(j.ok)load();else alert('비밀번호가 맞지 않아요')})}));
+if(ADM){var ed=el('div','ansed');var ta=document.createElement('textarea');ta.className='tin';ta.rows=3;ta.maxLength=1500;ta.placeholder='MZu 답변을 써주세요';ta.value=(p.answer&&p.answer!='__has__')?p.answer:'';ed.appendChild(ta);var sv=btn(p.answer?'답변 수정':'답변 달기','pr',function(){var t=ta.value.trim();if(!t){alert('답변 내용을 써주세요');return}sv.disabled=true;api({a:'answer',id:p.id,text:t}).then(function(j){sv.disabled=false;if(j.ok)load();else alert('실패했어요 (관리자 키 확인)')})});ed.appendChild(sv);act.appendChild(ed)}
+d.appendChild(act);return d}
+var BP={cur:null,busy:false,done:false,card:null,sent:null,io:null};
+function msgCard(t){var L=$('bl');L.textContent='';var c=el('div','card');c.appendChild(el('p','',t));L.appendChild(c)}
+function load(){var L=$('bl');L.textContent='';BP.cur=null;BP.done=false;BP.busy=false;if(BP.io){BP.io.disconnect();BP.io=null}BP.card=el('div','card');BP.card.style.display='none';L.appendChild(BP.card);BP.sent=el('div','sent');L.appendChild(BP.sent);more(true)}
+function more(first){if(BP.busy||BP.done)return;BP.busy=true;
+api({a:'list',after:BP.cur,limit:10}).then(function(j){BP.busy=false;
+if(j.error=='not_configured'){msgCard('게시판은 곧 열려요! 조금만 기다려주세요 💗');return}
+var ps=j.posts||[];if(first&&!ps.length){msgCard('아직 글이 없어요. 첫 번째 글을 남겨주세요!');return}
+BP.card.style.display='';ps.forEach(function(p){BP.card.appendChild(makePost(p))});if(j.last)BP.cur=j.last;BP.done=!j.more;BP.sent.textContent='';
+if(BP.done){if(BP.io){BP.io.disconnect();BP.io=null}return}
+BP.sent.appendChild(btn('더 보기','',function(){more()}));
+if(!BP.io&&'IntersectionObserver' in window){BP.io=new IntersectionObserver(function(en){if(en[0].isIntersecting)more()},{rootMargin:'300px'});BP.io.observe(BP.sent)}
+setTimeout(function(){if(!BP.done&&!BP.busy&&BP.sent.getBoundingClientRect().top<window.innerHeight+300)more()},150)
+}).catch(function(){BP.busy=false;if(first)msgCard('불러오지 못했어요. 잠시 후 다시 시도해주세요.')})}
+$('bs').onclick=function(){var e=$('be');e.textContent='';var t=$('bt').value.trim(),pw=$('bp').value;if(t.length<5){e.textContent='내용을 5자 이상 적어주세요.';return}if(pw.length<4){e.textContent='비밀번호를 4자 이상 정해주세요.';return}
+$('bs').disabled=true;api({a:'post',cat:document.querySelector('input[name=bc]:checked').value,nick:$('bn').value,text:t,pw:pw,priv:$('bv').checked}).then(function(j){$('bs').disabled=false;if(j.ok){$('bt').value='';$('bp').value='';e.style.color='var(--acc)';e.textContent='남겼어요! MZu가 확인하면 답변이 달려요 💗';load()}else{e.style.color='';e.textContent=j.error=='bad'?'고운 말을 써주세요 💗 (비속어는 남길 수 없어요)':j.error=='rate'?'잠시 후 다시 남겨주세요. (너무 자주 쓰면 막혀요)':j.error=='not_configured'?'게시판은 곧 열려요!':'남기지 못했어요. 다시 시도해주세요.'}}).catch(function(){$('bs').disabled=false;e.style.color='';e.textContent='남기지 못했어요. 다시 시도해주세요.'})};
+$('adm').onclick=function(ev){ev.preventDefault();if(ADM){ADM='';try{sessionStorage.removeItem('mzuadm')}catch(x){}load();alert('관리자 모드를 껐어요');return}var k=prompt('관리자 키');if(!k)return;ADM=k;api({a:'admin'}).then(function(j){if(j.ok){try{sessionStorage.setItem('mzuadm',k)}catch(x){}load();alert('관리자 모드예요. 글마다 "답변하기"가 보여요')}else{ADM='';alert('키가 맞지 않아요')}})};
+})()</script>
+<script>(function(){var t=document.getElementById('bt');if(!t)return;var P={q:'예) 저는 사주에 목이 많대요. 어떤 특징이 있나요?',req:'예) 이런 콘텐츠들도 만들어주세요'};
+document.querySelectorAll('input[name=bc]').forEach(function(r){r.addEventListener('change',function(){t.placeholder=P[r.value]})})})()</script>
+<script>(function(){var $=function(i){return document.getElementById(i)},timer=null,CM=[],hasMore=false,busy=false,sig='',nick='';
+nick='익명'+Math.floor(100+Math.random()*900);var cn=$('cn');if(cn)cn.value=nick;
+function adm(){return window.getAdm?window.getAdm():''}
+function api(b){var k=adm();if(k)b.admin=k;return fetch('/api/board',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(b)}).then(function(r){return r.json()})}
+function ft(t){var d=new Date(t);return ('0'+d.getHours()).slice(-2)+':'+('0'+d.getMinutes()).slice(-2)}
+function draw(mode){var L=$('cl'),s=JSON.stringify(CM.map(function(x){return x.id}))+adm();if(s==sig&&mode!='force')return;sig=s;var oh=L.scrollHeight,ot=L.scrollTop,near=oh-ot-L.clientHeight<80;L.textContent='';
+if(!CM.length){var e=document.createElement('p');e.className='bnote';e.textContent='아직 아무도 없어요. 첫 한마디를 남겨보세요!';L.appendChild(e);return}
+if(hasMore){var h=document.createElement('p');h.className='bnote';h.style.textAlign='center';h.textContent='↑ 위로 올리면 이전 글이 나와요';L.appendChild(h)}
+CM.forEach(function(x){var d=document.createElement('div');d.className='cm'+(x.mz?' mz':'');var b=document.createElement('b');b.textContent=(x.mz?'✨ ':'')+x.nick;var t=document.createElement('i');t.textContent=ft(x.ts);b.appendChild(t);
+if(adm()){var u=document.createElement('u');u.textContent='삭제';u.onclick=function(){if(confirm('삭제할까요?'))api({a:'cdel',id:x.id}).then(function(){poll()})};b.appendChild(u)}
+var sp=document.createElement('span');sp.textContent=x.text;d.appendChild(b);d.appendChild(sp);L.appendChild(d)});
+if(mode=='old')L.scrollTop=ot+(L.scrollHeight-oh);else if(near||mode=='first')L.scrollTop=L.scrollHeight;else L.scrollTop=ot}
+function poll(first){api({a:'clist',limit:30}).then(function(j){if(j.error=='not_configured'){$('cl').textContent='방명록은 곧 열려요! 💗';stop();return}
+var w=j.msgs||[];if(first)hasMore=!!j.more;var ids={};w.forEach(function(x){ids[x.id]=1});var lo=w.length?w[0].ts:0;
+CM=CM.filter(function(x){return x.ts<lo||ids[x.id]});var have={};CM.forEach(function(x){have[x.id]=1});w.forEach(function(x){if(!have[x.id])CM.push(x)});CM.sort(function(a,b){return a.ts-b.ts});draw(first?'first':'')}).catch(function(){})}
+function older(){if(busy||!hasMore||!CM.length)return;busy=true;api({a:'clist',limit:30,before:CM[0].ts}).then(function(j){busy=false;var w=j.msgs||[];hasMore=!!j.more;var have={};CM.forEach(function(x){have[x.id]=1});w.forEach(function(x){if(!have[x.id])CM.unshift(x)});CM.sort(function(a,b){return a.ts-b.ts});draw('old')}).catch(function(){busy=false})}
+function stop(){if(timer){clearInterval(timer);timer=null}}
+window.chatView=function(on){stop();if(on){CM=[];sig='';hasMore=false;poll(true);timer=setInterval(function(){if(!document.hidden)poll()},6000)}};
+var CL=$('cl');if(CL)CL.addEventListener('scroll',function(){if(CL.scrollTop<50)older()});
+function send(){var e=$('ce'),t=$('ct').value.trim();e.textContent='';e.style.color='';if(!t)return;$('cs').disabled=true;
+api({a:'cpost',nick:$('cn').value,text:t}).then(function(j){$('cs').disabled=false;if(j.ok){$('ct').value='';poll()}else e.textContent=j.error=='bad'?'고운 말을 써주세요 💗 (비속어는 남길 수 없어요)':j.error=='rate'?'너무 빨라요! 잠깐만 쉬었다 써주세요.':j.error=='link'?'링크나 주소는 남길 수 없어요.':'보내지 못했어요. 다시 시도해주세요.'}).catch(function(){$('cs').disabled=false;e.textContent='보내지 못했어요.'})}
+if($('cs')){$('cs').onclick=send;$('ct').addEventListener('keydown',function(ev){if(ev.key=='Enter'&&!ev.isComposing){ev.preventDefault();send()}})}
+})()</script>
+<script>(function(){var START_TOTAL=0;try{
+var d=new Date(Date.now()+9*3600*1000).toISOString().slice(0,10),first=true;
+try{first=localStorage.getItem('mzuv')!==d;if(first)localStorage.setItem('mzuv',d)}catch(e){}
+fetch('/api/board',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({a:'visit',first:first})}).then(function(r){return r.json()}).then(function(j){
+if(typeof j.total!='number')return;var f=function(n){return n.toLocaleString('ko-KR')};
+document.getElementById('vt').textContent=f(j.today);document.getElementById('va').textContent=f(START_TOTAL+j.total);document.getElementById('vc').style.display='block'}).catch(function(){})}catch(e){}})()</script>
+</body>
+</html>
